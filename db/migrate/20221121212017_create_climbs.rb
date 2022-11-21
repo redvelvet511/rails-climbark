@@ -4,7 +4,7 @@ class CreateClimbs < ActiveRecord::Migration[7.0]
       t.string :status
       t.text :description
       t.date :completion_date
-      t.references :route, null: false, foreign_key: true
+      t.references :line, null: false, foreign_key: true
       t.references :user, null: false, foreign_key: true
 
       t.timestamps
