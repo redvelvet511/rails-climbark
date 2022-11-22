@@ -14,6 +14,8 @@ p "created #{User.count} users."
   )
   area.save!
 end
+p "created #{Area.count} areas."
+
 rand(3..5).times do
   line = Line.create!(
     name: Faker::Address.street_name,
@@ -23,6 +25,8 @@ rand(3..5).times do
   )
   line.save!
 end
+p "created #{Line.count} lines."
+
 
 
 # 5.times do
