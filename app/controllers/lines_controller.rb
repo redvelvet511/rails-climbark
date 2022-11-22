@@ -2,11 +2,11 @@ class LinesController < ApplicationController
 
   def index
     @area = Area.find(params[:area_id])
-    @lines = Line.where(area: @area)
-    @lines = policy_scope(Line)
+    @lines = policy_scope(Line.where(area: @area))
   end
 
   def show
     @line = Line.find(params[:id])
+    @lines = policy_scope(Line.where(line: @line))
   end
 end
