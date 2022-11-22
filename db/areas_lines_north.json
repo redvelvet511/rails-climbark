@@ -1,6 +1,5 @@
 [
   {
-    "name": "Algoma Riverside Cliffs",
     "url": "https://www.mountainproject.com/area/123049448/algoma-riverside-cliffs",
     "identifier": 123049448,
     "lines": [
@@ -130,10 +129,12 @@
         "protection": "Bolts and rap rings",
         "url": "https://www.mountainproject.com/route/123055771/the-stars-at-night"
       }
-    ]
+    ],
+    "name": "Algoma Riverside Cliffs",
+    "latitude": 46.461,
+    "longitude": -83.244
   },
   {
-    "name": "Arktos",
     "url": "https://www.mountainproject.com/area/123182575/arktos",
     "identifier": 123182575,
     "lines": [
@@ -191,26 +192,32 @@
         "protection": null,
         "url": "https://www.mountainproject.com/route/123182709/tapes-cds"
       }
-    ]
+    ],
+    "name": "Arktos",
+    "latitude": 46.711,
+    "longitude": -79.299
   },
   {
-    "name": "Arktos",
     "url": "https://www.mountainproject.com/area/123182572/arktos",
     "identifier": 123182572,
     "lines": [
 
-    ]
+    ],
+    "name": "Arktos",
+    "latitude": 46.711,
+    "longitude": -79.299
   },
   {
-    "name": "Bellevue Tower",
     "url": "https://www.mountainproject.com/area/106893609/bellevue-tower",
     "identifier": 106893609,
     "lines": [
 
-    ]
+    ],
+    "name": "Bellevue Tower",
+    "latitude": 46.712,
+    "longitude": -84.226
   },
   {
-    "name": "Cummings Lake",
     "url": "https://www.mountainproject.com/area/117123426/cummings-lake",
     "identifier": 117123426,
     "lines": [
@@ -223,10 +230,12 @@
         "protection": null,
         "url": "https://www.mountainproject.com/route/117123486/welcome-to-canada"
       }
-    ]
+    ],
+    "name": "Cummings Lake",
+    "latitude": 46.462,
+    "longitude": -83.348
   },
   {
-    "name": "Echo Crag",
     "url": "https://www.mountainproject.com/area/113348848/echo-crag",
     "identifier": 113348848,
     "lines": [
@@ -401,10 +410,12 @@
         "protection": "3 bolts",
         "url": "https://www.mountainproject.com/route/113349056/wet-and-wild-american-summer"
       }
-    ]
+    ],
+    "name": "Echo Crag",
+    "latitude": 46.428,
+    "longitude": -81.192
   },
   {
-    "name": "Eyeball, The",
     "url": "https://www.mountainproject.com/area/114495049/the-eyeball",
     "identifier": 114495049,
     "lines": [
@@ -435,34 +446,42 @@
         "protection": "Sport draws",
         "url": "https://www.mountainproject.com/route/120769707/myopic"
       }
-    ]
+    ],
+    "name": "The Eyeball",
+    "latitude": 46.51,
+    "longitude": -83.135
   },
   {
-    "name": "Gull Lake Cliffs",
     "url": "https://www.mountainproject.com/area/107597671/gull-lake-cliffs",
     "identifier": 107597671,
     "lines": [
 
-    ]
+    ],
+    "name": "Gull Lake Cliffs",
+    "latitude": 46.931,
+    "longitude": -80.185
   },
   {
-    "name": "Highway 546",
     "url": "https://www.mountainproject.com/area/118346289/highway-546",
     "identifier": 118346289,
     "lines": [
 
-    ]
+    ],
+    "name": "Highway 546",
+    "latitude": 46.562,
+    "longitude": -83.064
   },
   {
-    "name": "Kama Bay Rock Climbing",
     "url": "https://www.mountainproject.com/area/113263389/kama-bay-rock-climbing",
     "identifier": 113263389,
     "lines": [
 
-    ]
+    ],
+    "name": "Kama Bay Rock Climbing",
+    "latitude": 49.002,
+    "longitude": -88.012
   },
   {
-    "name": "Kamiskotia ski resort",
     "url": "https://www.mountainproject.com/area/115386896/kamiskotia-ski-resort",
     "identifier": 115386896,
     "lines": [
@@ -484,10 +503,12 @@
         "protection": "4 bolts, 2 hanger anchor, shares with i don't like moguls",
         "url": "https://www.mountainproject.com/route/115386913/party-cannon"
       }
-    ]
+    ],
+    "name": "Kamiskotia ski resort",
+    "latitude": 48.537,
+    "longitude": -81.538
   },
   {
-    "name": "Kenora",
     "url": "https://www.mountainproject.com/area/112788508/kenora",
     "identifier": 112788508,
     "lines": [
@@ -761,18 +782,22 @@
         "protection": "bolts",
         "url": "https://www.mountainproject.com/route/123077914/waawaate"
       }
-    ]
+    ],
+    "name": "Kenora",
+    "latitude": 49.767,
+    "longitude": -94.489
   },
   {
-    "name": "Kingston Mills",
     "url": "https://www.mountainproject.com/area/113769938/kingston-mills",
     "identifier": 113769938,
     "lines": [
 
-    ]
+    ],
+    "name": "Kingston Mills",
+    "latitude": 44.291,
+    "longitude": -76.444
   },
   {
-    "name": "Lac Des Mille Lacs",
     "url": "https://www.mountainproject.com/area/114970941/lac-des-mille-lacs",
     "identifier": 114970941,
     "lines": [
@@ -839,18 +864,22 @@
         "protection": null,
         "url": "https://www.mountainproject.com/route/114971024/fruity-stripes"
       }
-    ]
+    ],
+    "name": "Lac Des Mille Lacs",
+    "latitude": 48.838,
+    "longitude": -90.522
   },
   {
-    "name": "Manitoulin Island",
     "url": "https://www.mountainproject.com/area/113509744/manitoulin-island",
     "identifier": 113509744,
     "lines": [
 
-    ]
+    ],
+    "name": "Manitoulin Island",
+    "latitude": 45.846,
+    "longitude": -82.11
   },
   {
-    "name": "Mowatt's landing",
     "url": "https://www.mountainproject.com/area/109265793/mowatts-landing",
     "identifier": 109265793,
     "lines": [
@@ -863,18 +892,22 @@
         "protection": "No bolts, pinscars and cracks for pro. Trees for anchoring at the top.",
         "url": "https://www.mountainproject.com/route/109265803/wisdoms-teeth"
       }
-    ]
+    ],
+    "name": "Mowatt's landing",
+    "latitude": 47.456,
+    "longitude": -79.726
   },
   {
-    "name": "Nooks Boulders, The",
     "url": "https://www.mountainproject.com/area/118166169/the-nooks-boulders",
     "identifier": 118166169,
     "lines": [
 
-    ]
+    ],
+    "name": "The Nooks Boulders",
+    "latitude": 46.611,
+    "longitude": -82.898
   },
   {
-    "name": "Sawpit Bay",
     "url": "https://www.mountainproject.com/area/106893578/sawpit-bay",
     "identifier": 106893578,
     "lines": [
@@ -887,10 +920,12 @@
         "protection": null,
         "url": "https://www.mountainproject.com/route/106893582/jaws"
       }
-    ]
+    ],
+    "name": "Sawpit Bay",
+    "latitude": 46.966,
+    "longitude": -84.751
   },
   {
-    "name": "Sudbury Area",
     "url": "https://www.mountainproject.com/area/114492064/sudbury-area",
     "identifier": 114492064,
     "lines": [
@@ -1263,10 +1298,12 @@
         "protection": null,
         "url": "https://www.mountainproject.com/route/114502465/timberwolf-8"
       }
-    ]
+    ],
+    "name": "Sudbury Area",
+    "latitude": 46.493,
+    "longitude": -80.99
   },
   {
-    "name": "Temagami",
     "url": "https://www.mountainproject.com/area/117366454/temagami",
     "identifier": 117366454,
     "lines": [
@@ -1279,10 +1316,12 @@
         "protection": "Water",
         "url": "https://www.mountainproject.com/route/117366528/spider-peace-dws"
       }
-    ]
+    ],
+    "name": "Temagami",
+    "latitude": 47.062,
+    "longitude": -79.797
   },
   {
-    "name": "Thunder Bay Region Rock",
     "url": "https://www.mountainproject.com/area/105814270/thunder-bay-region-rock",
     "identifier": 105814270,
     "lines": [
@@ -1439,6 +1478,9 @@
         "protection": "3 bolts and bolted anchor. No rap rings, can scramble off to clean.",
         "url": "https://www.mountainproject.com/route/122862658/pop-da-hood"
       }
-    ]
+    ],
+    "name": "Thunder Bay Region Rock",
+    "latitude": 48.411,
+    "longitude": -89.253
   }
 ]

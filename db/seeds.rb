@@ -3,7 +3,7 @@ require "json"
 Line.destroy_all
 Area.destroy_all
 
-area_lines_data = JSON.parse(File.read("db/areas_lines.json"))
+area_lines_data = JSON.parse(File.read("db/areas_lines_north.json"))
 
 area_lines_data.each do |area|
   if area["lines"].empty?
