@@ -1,0 +1,13 @@
+<h1>Routes in <%= @area.name %></h1>
+
+<ul>
+  <% @lines.each do |line| %>
+    <li>
+    <%= line.name %>
+    </li>
+  <% end %>
+</ul>
+
+    <%# Grade:line.grade
+    Category:line.category
+    Description:line.description %>
