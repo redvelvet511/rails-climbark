@@ -1,39 +1,43 @@
-require 'faker'
+require "json"
 
+Line.destroy_all
 Area.destroy_all
 User.destroy_all
-Line.destroy_all
 
-user = User.new(email: "climbark@gmail.com", username: "climbark", password: 123456)
-user.save!
-p "created #{User.count} users."
+User.create!(email: "climbark@gmail.com", username: "climbark", password: 123456)
+p "Created an user!"
 
-5.times do
-  area = Area.create!(
-    name: Faker::Nation.capital_city
-  )
-  area.save!
+area_lines_data = JSON.parse(File.read("db/areas_lines_north.json"))
+
+area_lines_data.each do |area|
+  if area["lines"].empty?
+    p "Skipped #{area["name"]} as it has no lines."
+    next
+  end
+
+  new_area = Area.new(name: area["name"])
+  new_area.save!
+  p "Created area #{new_area.name}."
+
+  area["lines"].each do |line|
+    new_line = Line.new(
+      name: line["name"],
+      grade: line["grade"],
+      category: line["category"],
+      description: line["description"],
+      location: line["location"],
+      protection: line["protection"],
+      area: new_area
+    )
+    new_line.save
+  end
+  p "Created #{new_area.lines.count} line(s) for #{new_area.name}."
+
+  if new_area.lines.empty?
+    new_area.destroy
+    p "Destroyed #{new_area.name} as it has no valid lines."
+  end
 end
-rand(3..5).times do
-  line = Line.create!(
-    name: Faker::Address.street_name,
-    grade: Line::GRADES_LIST.sample, category: Line::CATEGORIES.sample,
-    description: Faker::Movie.quote,
-    area: Area.first
-  )
-  line.save!
-end
 
-
-# 5.times do
-#   area = Area.new(
-#     name: Faker::Nation.capital_city
-#   )
-#   area.save!
-#   rand(3..5).times do
-#     line = Line.new(
-#       name: Faker::Address.street_name
-#     )
-#     line.save!
-#   end
-# end
+p "Created #{Area.count} areas in total!"
+p "Created #{Line.count} lines in total!"
