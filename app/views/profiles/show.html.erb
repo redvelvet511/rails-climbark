@@ -1,0 +1,4 @@
+<h1><%= current_user.username %>'s Profile</h1>
+<% if policy(Climb).index? %>
+  <%= link_to "My climbs", climbs_path %>
+<% end %>
