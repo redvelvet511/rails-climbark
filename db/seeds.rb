@@ -2,6 +2,10 @@ require "json"
 
 Line.destroy_all
 Area.destroy_all
+User.destroy_all
+
+User.create!(email: "climbark@gmail.com", username: "climbark", password: 123456)
+p "Created an user!"
 
 area_lines_data = JSON.parse(File.read("db/areas_lines_north.json"))
 

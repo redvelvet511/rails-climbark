@@ -1,0 +1,7 @@
+<h1>All Areas</h1>
+
+<ul>
+  <% @areas.each do |area| %>
+    <li><%= link_to area.name, area_lines_path(area) %></li>
+  <% end %>
+</ul>

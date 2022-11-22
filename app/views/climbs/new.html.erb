@@ -1,0 +1,8 @@
+<h1>Add a new climb on <%= @line.name %> route</h1>
+
+<%= simple_form_for(climb) do |f| %>
+  <%= f.input :description %>
+  <%= f.input :status,  as: :select, collection: Climb::STATUSES.map { |s| [s.capitalize, s] } %>
+  <%= f.input :photo, as: :file %>
+  <%= f.input :completion_date, as: :date, html5: true %>
+<% end %>
