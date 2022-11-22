@@ -4,10 +4,8 @@
   <% @lines.each do |line| %>
     <li>
     <%= link_to line.name, area_line_path(@area, line) %>
+    <%= line.grade %>
+    <%= line.category %>
     </li>
   <% end %>
 </ul>
-
-    <%# Grade:line.grade
-    Category:line.category
-    Description:line.description %>
