@@ -1,8 +1,8 @@
 class ClimbsController < ApplicationController
   before_action :authenticate_user!, only: %i[index new create]
   def index
-    @climbs = Climb.all
-    authorize @climb, policy_class: ClimbPolicy
+    @climbs = policy_scope(Climb)
+    authorize @climbs, policy_class: ClimbPolicy
   end
 
   def new

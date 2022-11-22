@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   resources :climbs, only: %i[index new create]
 
+  get "/profile", to: "profiles#show"
+
   # Defines the root path route ("/")
   # root "articles#index"
 end
