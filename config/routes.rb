@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   resources :areas, only: %i[index] do
     resources :lines, only: %i[index]
   end
+
+  resources :climbs, only: %i[new create]
+
   # Defines the root path route ("/")
   # root "articles#index"
 end
