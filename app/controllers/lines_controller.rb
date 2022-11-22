@@ -8,5 +8,6 @@ class LinesController < ApplicationController
   def show
     @line = Line.find(params[:id])
     @lines = policy_scope(Line.where(line: @line))
+    authorize(@line)
   end
 end
