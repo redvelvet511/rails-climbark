@@ -1,7 +1,7 @@
 <h1>My Climbs</h1>
 
 <% @climbs.each do |climb| %>
-  <p><%= climb.line.name %> | <%= climb.status %> | <%= link_to "Edit" %></p>
+  <p><%= link_to climb.line.name, climb_path(climb) %> | <strong><%= climb.status %></strong> | <%= link_to "Edit", edit_climb_path(climb) %></p>
 <% end %>
 
 <%= link_to "Back to profile", profile_path %>

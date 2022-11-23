@@ -1,0 +1,9 @@
+<h1><%= @climb.line.name %></h1>
+
+<p>Description: <%= @climb.description %></p>
+
+<p>Status: <%= @climb.status %></p>
+<p>Date completed: <%= @climb.completion_date %></p>
+
+<%= link_to "Edit", edit_climb_path(@climb) %>
+<%= link_to "Back", climbs_path %>

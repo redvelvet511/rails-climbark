@@ -1,10 +1,14 @@
 class ClimbPolicy < ApplicationPolicy
+  def show?
+    record.user == user
+  end
+
   def create?
     true
   end
 
   def update?
-    true
+    record.user == user
   end
 
   class Scope < Scope
