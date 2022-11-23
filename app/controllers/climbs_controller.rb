@@ -23,6 +23,17 @@ class ClimbsController < ApplicationController
     end
   end
 
+  def edit
+    @climb = Climb.find(params[:id])
+  end
+
+  def update
+    @climb = Climb.find(params[:id])
+    @climb.update(climb_params)
+    redirect_to climbs_path
+    authorize @climb
+  end
+
   private
 
   def set_line
