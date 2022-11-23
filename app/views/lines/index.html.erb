@@ -1,3 +1,7 @@
+<%= link_to areas_path do %>
+  <i class="fa-solid fa-arrow-left-long"></i>
+<% end %>
+
 <h1>Routes in <%= @area.name %></h1>
 
 <ul>
@@ -9,5 +13,3 @@
     </li>
   <% end %>
 </ul>
-
-<%= link_to "Back to all areas", areas_path, class: "btn-main" %>
