@@ -8,6 +8,7 @@ class LinesController < ApplicationController
 
   def show
     @line = Line.find(params[:id])
+    @tips = @line.tips
     authorize(@line)
   end
 end
