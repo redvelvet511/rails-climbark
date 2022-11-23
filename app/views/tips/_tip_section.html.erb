@@ -3,6 +3,14 @@
     <strong><%= tip.title? ? tip.title : "Untitled" %></strong>
     <br>
     <%= tip.content %>
+
+    <%= link_to(edit_tip_path(tip)) do %>
+      <i class="fa-solid fa-square-pen"></i>
+    <% end %>
+
+    <%= link_to(tip_path(tip), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} ) do %>
+      <i class="fa-solid fa-square-minus"></i>
+    <% end %>
     <br>
     <em>Left by <%= tip.user.username %> on <%= tip.created_at %></em>
   </div>

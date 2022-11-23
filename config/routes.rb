@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   end
 
   resources :climbs, only: %i[index edit update]
+  resources :tips, only: %i[edit update destroy]
 
   get "/profile", to: "profiles#show"
 end
