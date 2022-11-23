@@ -12,8 +12,8 @@ class TipPolicy < ApplicationPolicy
   end
 
   class Scope < Scope
-    def resolve
-      scope.where(user: user)
-    end
+    # def resolve
+    #   scope.all
+    # end
   end
 end
