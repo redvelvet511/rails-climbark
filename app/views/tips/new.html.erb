@@ -1,8 +1,11 @@
-<h1>Add a tip on <%= @line.name %></h1>
+<h1>Add a tip for <%= @line.name %></h1>
 <p>Leave a tip on this route for future climbers</p>
-<%= simple_form_for(tip) do |f| %>
-  <%= f.input :description, as: :text %>
-  <%= f.input :photo, as: :file %>
-  <%= f.input :completion_date, as: :date, html5: true %>
 
+<%= simple_form_for [@line, @tip] do |f| %>
+  <%= f.input :title %>
+  <%= f.input :content %>
+  <%# f.input :photo, as: :file %>
+  <%= f.submit %>
 <% end %>
+
+<%= link_to "Back to #{@line.name}", line_path(@line) %>

@@ -3,7 +3,7 @@ class LinesController < ApplicationController
 
   def index
     @area = Area.find(params[:area_id])
-    @lines = policy_scope(Line.where(area: @area))
+    @lines = policy_scope(Line).where(area: @area)
   end
 
   def show
