@@ -3,9 +3,9 @@
 <ul>
   <% @lines.each do |line| %>
     <li>
-    <%= link_to line.name, area_line_path(@area, line) %>
-    <%= line.grade %>
-    <%= line.category %>
+      <%= link_to line.name, line_path(line) %>
+      <%= line.grade %>
+      <%= line.category %>
     </li>
   <% end %>
 </ul>
