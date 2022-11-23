@@ -19,6 +19,28 @@ class TipsController < ApplicationController
     end
   end
 
+  def edit
+    @tip = Tip.find(params[:id])
+    authorize(@tip)
+  end
+
+  def update
+    @tip = Tip.find(params[:id])
+    if @tip.update(tip_params)
+      redirect_to line_path(@tip.line)
+    else
+      render :edit, status: :unprocessable_entity
+    end
+    authorize(@tip)
+  end
+
+  def destroy
+    @tip = Tip.find(params[:id])
+    @tip.destroy
+    redirect_to line_path(@tip.line), status: :see_other
+    authorize(@tip)
+  end
+
   private
 
   def set_line

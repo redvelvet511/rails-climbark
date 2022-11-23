@@ -10,8 +10,9 @@ Rails.application.routes.draw do
     resources :climbs, only: %i[new create]
     resources :tips, only: %i[new create]
   end
-
+  
   resources :climbs, only: %i[index show edit update destroy]
+  resources :tips, only: %i[edit update destroy]
 
   get "/profile", to: "profiles#show"
 end

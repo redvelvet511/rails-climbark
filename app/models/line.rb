@@ -11,4 +11,7 @@ class Line < ApplicationRecord
   validates :grade, presence: true, inclusion: { in: GRADES_LIST }
   validates :category, presence: true, inclusion: { in: CATEGORIES }
   validates :description, presence: true
+
+  include PgSearch::Model
+  multisearchable against: [:name, :category]
 end
