@@ -1,13 +1,9 @@
 <h1><%= @climb.line.name %></h1>
 
 <p>Description: <%= @climb.description %></p>
-
 <p>Status: <%= @climb.status %></p>
 <p>Date completed: <%= @climb.completion_date %></p>
 
 <%= link_to "Edit", edit_climb_path(@climb) %>
-<%= link_to "Back", climbs_path %>
-<%= link_to "Delete",
-climb_path(@climb),
-data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to DELETE this?"}
- %>
+<%= link_to "Delete", climb_path(@climb), data: {turbo_method: :delete, turbo_confirm: "Delete this climb?"} %>
+<%= link_to "Back to my climbs", climbs_path %>
