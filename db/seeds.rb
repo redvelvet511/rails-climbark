@@ -4,6 +4,7 @@ Climb.destroy_all
 Line.destroy_all
 Area.destroy_all
 User.destroy_all
+p "Cleaned up database."
 
 User.create!(email: "climbark@gmail.com", username: "climbark", password: 123456)
 p "Created an user!"
