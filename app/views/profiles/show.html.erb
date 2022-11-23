@@ -1,4 +1,7 @@
-<h1><%= current_user.username %>'s Profile</h1>
-<% if policy(Climb).index? %>
-  <%= link_to "My climbs", climbs_path %>
-<% end %>
+<h1><%= @user.username %>'s Profile</h1>
+
+<%= link_to "My Climbs", climbs_path %>
+
+<%= link_to "Home", root_path %>
+
+<%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete} %>

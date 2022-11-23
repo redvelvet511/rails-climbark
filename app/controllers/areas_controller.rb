@@ -1,6 +1,7 @@
 class AreasController < ApplicationController
+  skip_before_action :authenticate_user!, only: :index
+
   def index
-    @areas = Area.all
     @areas = policy_scope(Area)
   end
 end
