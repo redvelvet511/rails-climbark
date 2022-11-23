@@ -4,7 +4,7 @@ class Line < ApplicationRecord
 
   belongs_to :area
   has_many :climbs
-  has_many :users, through: :climbs
+  has_many :users, through: :climbsGemfile.lock
   has_many :tips, dependent: :destroy
 
   validates :name, presence: true

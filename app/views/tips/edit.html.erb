@@ -1,0 +1,8 @@
+<h1>Edit a tip for </h1>
+
+<%= simple_form_for(@tip) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :content %>
+  <%# f.input :photo, as: :file %>
+  <%= f.submit %>
+<% end %>

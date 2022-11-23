@@ -1,8 +1,11 @@
 require "json"
+require "open-uri"
 
+Climb.destroy_all
 Line.destroy_all
 Area.destroy_all
 User.destroy_all
+p "Cleaned up database."
 
 User.create!(email: "climbark@gmail.com", username: "climbark", password: 123456)
 p "Created an user!"
@@ -37,6 +40,12 @@ area_lines_data.each do |area|
     new_area.destroy
     p "Destroyed #{new_area.name} as it has no valid lines."
   end
+
+  next if area["photo_url"].nil? || new_area.destroyed?
+
+  photo_file = URI.open(area["photo_url"])
+  new_area.photo.attach(io: photo_file, filename: "#{area['identifier']}.jpg", content_type: "image/jpg")
+  p "Attached photo to #{new_area.name}"
 end
 
 p "Created #{Area.count} areas in total!"
