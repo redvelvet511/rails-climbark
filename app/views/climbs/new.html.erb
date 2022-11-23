@@ -8,7 +8,7 @@
 <%= simple_form_for [@line, @climb] do |f| %>
   <%= f.input :description %>
   <%= f.input :status, as: :select, collection: Climb::STATUSES.map { |s| [s.capitalize, s] } %>
-  <%# <%= f.input :photo, as: :file %>
+  <%# f.input :photo, as: :file %>
   <%= f.input :completion_date, as: :date, html5: true %>
   <%= f.submit %>
 <% end %>

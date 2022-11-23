@@ -1,26 +1,23 @@
 class TipsController < ApplicationController
   before_action :set_line, only: %i[new create]
 
-  def index
-    @tips = policy_scope(Tip)
-  end
-
   def new
     @tip = Tip.new
-    authorize(@tip)
+    authorize(@line, policy_class: TipPolicy)
   end
 
   def create
     @tip = Tip.new(tip_params)
     @tip.line = @line
     @tip.user = current_user
-    authorize(@tip)
 
-    # if @tip.save
-    #   redirect_to line_path(@line)
-    # else
-    #   render :new, status: :unprocessable_entity
-    # end
+    authorize(@line, policy_class: TipPolicy)
+
+    if @tip.save
+      redirect_to line_path(@line)
+    else
+      render :new, status: 422
+    end
   end
 
   private
