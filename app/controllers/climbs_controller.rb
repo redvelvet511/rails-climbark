@@ -1,6 +1,6 @@
 class ClimbsController < ApplicationController
   before_action :set_line, only: %i[new create]
-  before_action :set_climb, only: %i[show edit update]
+  before_action :set_climb, only: %i[show edit update destroy]
 
   def index
     @climbs = policy_scope(Climb)
@@ -35,7 +35,7 @@ class ClimbsController < ApplicationController
   def update
     @climb.update(climb_params)
     authorize(@climb)
-    
+
     if @climb.save
       redirect_to climb_path(@climb)
     else
@@ -43,12 +43,18 @@ class ClimbsController < ApplicationController
     end
   end
 
+  def destroy
+    @climb.destroy
+    authorize(@climb)
+    redirect_to climbs_path, status: 303 # see_other
+  end
+
   private
 
   def set_line
     @line = Line.find(params[:line_id])
   end
-  
+
   def set_climb
     @climb = Climb.find(params[:id])
   end
