@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   resources :lines, only: :show do
     resources :climbs, only: %i[new create]
+    resources :tips, only: %i[new create]
   end
 
   resources :climbs, only: :index
