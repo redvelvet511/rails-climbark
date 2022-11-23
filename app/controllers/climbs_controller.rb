@@ -37,7 +37,7 @@ class ClimbsController < ApplicationController
     @climb = Climb.find(params[:id])
     @climb.update(climb_params)
     if @climb.save
-      redirect_to climbs_path(@climb)
+      redirect_to climb_path(@climb)
     else
       render :edit, status: 422
     end
