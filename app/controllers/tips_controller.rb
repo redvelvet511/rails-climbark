@@ -10,7 +10,6 @@ class TipsController < ApplicationController
     @tip = Tip.new(tip_params)
     @tip.line = @line
     @tip.user = current_user
-
     authorize(@line, policy_class: TipPolicy)
 
     if @tip.save
