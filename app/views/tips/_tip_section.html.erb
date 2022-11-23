@@ -1,3 +1,10 @@
 <% @tips.each do |tip| %>
-  <div class="tip-card"><%= tip.content %></div>
+  <div class="tip-card">
+    <strong><%= tip.title? ? tip.title : "Untitled" %></strong>
+    <br>
+    <%= tip.content %>
+    <br>
+    <em>Left by <%= tip.user.username %> on <%= tip.created_at %></em>
+  </div>
+  <br>
 <% end %>
