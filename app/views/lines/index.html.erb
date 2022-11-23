@@ -3,9 +3,11 @@
 <ul>
   <% @lines.each do |line| %>
     <li>
-    <%= link_to line.name, area_line_path(@area, line) %>
-    <%= line.grade %>
-    <%= line.category %>
+      <%= link_to line.name, line_path(line) %>
+      <%= line.grade %>
+      <%= line.category %>
     </li>
   <% end %>
 </ul>
+
+<%= link_to "Back to all areas", areas_path, class: "btn-main" %>

@@ -11,7 +11,7 @@ area_lines_data = JSON.parse(File.read("db/areas_lines_north.json"))
 
 area_lines_data.each do |area|
   if area["lines"].empty?
-    p "Skipped #{area["name"]} as it has no lines."
+    p "Skipped #{area['name']} as it has no lines."
     next
   end
 
