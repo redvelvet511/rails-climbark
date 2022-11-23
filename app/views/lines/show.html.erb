@@ -15,4 +15,10 @@
 
 <h3>Tips for this route</h3>
 
+<% if user_signed_in? %>
+  <%= render "tips/tip_section", tips: @tips %>
+<% else %>
+  <p><%= link_to "Sign in", new_user_session_path %> to view tips left by other climbers on this route!</p>
+<% end %>
+
 <%= link_to "Back to routes in #{@line.area.name}", area_lines_path(@line.area) %>
