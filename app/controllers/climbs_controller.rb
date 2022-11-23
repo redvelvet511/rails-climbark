@@ -19,7 +19,7 @@ class ClimbsController < ApplicationController
     if @climb.save
       redirect_to line_path(@line)
     else
-      render :new, status: 422
+      render :new, status: :unprocessable_entity
     end
   end
 

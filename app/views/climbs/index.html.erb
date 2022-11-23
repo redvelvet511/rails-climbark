@@ -1,4 +1,7 @@
 <h1>My Climbs</h1>
-<%# <ul>
-  <% @climbs.lines do %>
-<%# </ul>  %>
+
+<% @climbs.each do |climb| %>
+  <p><%= climb.line.name %> | <%= climb.status %></p>
+<% end %>
+
+<%= link_to "Back to profile", profile_path %>

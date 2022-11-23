@@ -1,3 +1,7 @@
 <h1><%= @user.username %>'s Profile</h1>
 
 <%= link_to "My Climbs", climbs_path %>
+
+<%= link_to "Home", root_path %>
+
+<%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete} %>
