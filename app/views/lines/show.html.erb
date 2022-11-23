@@ -9,6 +9,6 @@
 <%= @line.description %>
 
 <%= link_to "Log Climb", new_line_climb_path(@line), class: "btn btn-main" %>
-<%= link_to "Leave Tip", "#", class: "btn btn-main" %>
+<%= link_to "Leave Tip", new_line_tip_path(@line), class: "btn btn-main" %>
 
 <%= link_to "Back to routes in #{@line.area.name}", area_lines_path(@line.area) %>
