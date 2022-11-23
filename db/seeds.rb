@@ -1,5 +1,6 @@
 require "json"
 
+Climb.destroy_all
 Line.destroy_all
 Area.destroy_all
 User.destroy_all

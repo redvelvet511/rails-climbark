@@ -1,5 +1,6 @@
 class ClimbsController < ApplicationController
   before_action :set_line, only: %i[new create]
+  before_action :set_climb, only: %i[show edit update]
 
   def index
     @climbs = policy_scope(Climb)
@@ -23,21 +24,33 @@ class ClimbsController < ApplicationController
     end
   end
 
+  def show
+    authorize(@climb)
+  end
+
   def edit
-    @climb = Climb.find(params[:id])
+    authorize(@climb)
   end
 
   def update
-    @climb = Climb.find(params[:id])
     @climb.update(climb_params)
-    redirect_to climbs_path
-    authorize @climb
+    authorize(@climb)
+    
+    if @climb.save
+      redirect_to climb_path(@climb)
+    else
+      render :edit, status: 422
+    end
   end
 
   private
 
   def set_line
     @line = Line.find(params[:line_id])
+  end
+  
+  def set_climb
+    @climb = Climb.find(params[:id])
   end
 
   def climb_params
