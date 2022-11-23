@@ -1,16 +1,16 @@
 class ClimbsController < ApplicationController
+  before_action :set_line, only: %i[new create]
+
   def index
     @climbs = policy_scope(Climb)
   end
 
   def new
-    @line = Line.find(params[:line_id])
     @climb = Climb.new
     authorize(@climb)
   end
 
   def create
-    @line = Line.find(params[:line_id])
     @climb = Climb.new(climb_params)
     @climb.line = @line
     @climb.user = current_user
@@ -24,6 +24,10 @@ class ClimbsController < ApplicationController
   end
 
   private
+
+  def set_line
+    @line = Line.find(params[:line_id])
+  end
 
   def climb_params
     params.require(:climb).permit(:status, :description, :completion_date)
