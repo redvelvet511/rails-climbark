@@ -131,6 +131,7 @@
       }
     ],
     "name": "Algoma Riverside Cliffs",
+    "photo_url": "https://cdn2.apstatic.com/photos/climb/123093128_large_1663683505.jpg",
     "latitude": 46.461,
     "longitude": -83.244
   },
@@ -194,6 +195,7 @@
       }
     ],
     "name": "Arktos",
+    "photo_url": null,
     "latitude": 46.711,
     "longitude": -79.299
   },
@@ -204,6 +206,7 @@
 
     ],
     "name": "Arktos",
+    "photo_url": null,
     "latitude": 46.711,
     "longitude": -79.299
   },
@@ -214,6 +217,7 @@
 
     ],
     "name": "Bellevue Tower",
+    "photo_url": null,
     "latitude": 46.712,
     "longitude": -84.226
   },
@@ -232,6 +236,7 @@
       }
     ],
     "name": "Cummings Lake",
+    "photo_url": null,
     "latitude": 46.462,
     "longitude": -83.348
   },
@@ -412,6 +417,7 @@
       }
     ],
     "name": "Echo Crag",
+    "photo_url": "https://cdn2.apstatic.com/photos/climb/113349359_large_1500419040.jpg",
     "latitude": 46.428,
     "longitude": -81.192
   },
@@ -448,6 +454,7 @@
       }
     ],
     "name": "The Eyeball",
+    "photo_url": "https://cdn2.apstatic.com/photos/climb/114503344_large_1529519983.jpg",
     "latitude": 46.51,
     "longitude": -83.135
   },
@@ -458,6 +465,7 @@
 
     ],
     "name": "Gull Lake Cliffs",
+    "photo_url": "https://cdn2.apstatic.com/photos/climb/107597683_medium_1494199312.jpg",
     "latitude": 46.931,
     "longitude": -80.185
   },
@@ -468,6 +476,7 @@
 
     ],
     "name": "Highway 546",
+    "photo_url": null,
     "latitude": 46.562,
     "longitude": -83.064
   },
@@ -478,6 +487,7 @@
 
     ],
     "name": "Kama Bay Rock Climbing",
+    "photo_url": "https://cdn2.apstatic.com/photos/climb/113265388_large_1499295458.jpg",
     "latitude": 49.002,
     "longitude": -88.012
   },
@@ -505,6 +515,7 @@
       }
     ],
     "name": "Kamiskotia ski resort",
+    "photo_url": null,
     "latitude": 48.537,
     "longitude": -81.538
   },
@@ -784,6 +795,7 @@
       }
     ],
     "name": "Kenora",
+    "photo_url": "https://cdn2.apstatic.com/photos/climb/114089536_large_1518754447.jpg",
     "latitude": 49.767,
     "longitude": -94.489
   },
@@ -794,6 +806,7 @@
 
     ],
     "name": "Kingston Mills",
+    "photo_url": "https://cdn2.apstatic.com/photos/climb/114492812_large_1529266779.jpg",
     "latitude": 44.291,
     "longitude": -76.444
   },
@@ -866,6 +879,7 @@
       }
     ],
     "name": "Lac Des Mille Lacs",
+    "photo_url": "https://cdn2.apstatic.com/photos/climb/122831516_large_1659412951.jpg",
     "latitude": 48.838,
     "longitude": -90.522
   },
@@ -876,6 +890,7 @@
 
     ],
     "name": "Manitoulin Island",
+    "photo_url": "https://cdn2.apstatic.com/photos/climb/117942404_large_1572012502_topo.jpg",
     "latitude": 45.846,
     "longitude": -82.11
   },
@@ -894,6 +909,7 @@
       }
     ],
     "name": "Mowatt's landing",
+    "photo_url": "https://cdn2.apstatic.com/photos/climb/109265814_large_1494343480.jpg",
     "latitude": 47.456,
     "longitude": -79.726
   },
@@ -904,6 +920,7 @@
 
     ],
     "name": "The Nooks Boulders",
+    "photo_url": "https://cdn2.apstatic.com/photos/climb/118195420_large_1577759867.jpg",
     "latitude": 46.611,
     "longitude": -82.898
   },
@@ -922,6 +939,7 @@
       }
     ],
     "name": "Sawpit Bay",
+    "photo_url": null,
     "latitude": 46.966,
     "longitude": -84.751
   },
@@ -1300,6 +1318,7 @@
       }
     ],
     "name": "Sudbury Area",
+    "photo_url": "https://cdn2.apstatic.com/photos/climb/114504214_large_1529540417.jpg",
     "latitude": 46.493,
     "longitude": -80.99
   },
@@ -1318,6 +1337,7 @@
       }
     ],
     "name": "Temagami",
+    "photo_url": "https://cdn2.apstatic.com/photos/climb/117366505_large_1563294271.jpg",
     "latitude": 47.062,
     "longitude": -79.797
   },
@@ -1480,6 +1500,7 @@
       }
     ],
     "name": "Thunder Bay Region Rock",
+    "photo_url": "https://cdn2.apstatic.com/photos/climb/122849945_large_1659810265.jpg",
     "latitude": 48.411,
     "longitude": -89.253
   }

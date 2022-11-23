@@ -48,8 +48,8 @@ gem "sassc-rails"
 # Custom section
 gem "pundit"
 gem "faker"
+gem "cloudinary"
 gem "pg_search"
-
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"

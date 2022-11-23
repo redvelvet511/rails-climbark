@@ -2,6 +2,11 @@
 
 <ul>
   <% @areas.each do |area| %>
-    <li><%= link_to area.name, area_lines_path(area) %></li>
+    <li>
+      <%= link_to area.name, area_lines_path(area) %>
+      <% if area.photo.key %>
+        <%= cl_image_tag area.photo.key, height: 100, width: 100, crop: :fill %>
+      <% end %>
+    </li>
   <% end %>
 </ul>

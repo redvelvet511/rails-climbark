@@ -22,6 +22,9 @@ areas.each do |area|
 
   area[:name] = area_doc.search("h1").text.strip.split("\n").first
 
+  area_photo_page_node = area_doc.search("#carousel-item-0 a")
+  area[:photo_url] = area_photo_page_node.empty? ? nil : scrape_photo_url(area_photo_page_node)
+
   area_coordinates = area_doc.search(".description-details td")[3].text.gsub(",", " ").split.first(2)
   area[:latitude] = area_coordinates.first.to_f
   area[:longitude] = area_coordinates.last.to_f
