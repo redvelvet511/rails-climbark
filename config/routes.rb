@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   resources :tips, only: %i[edit update destroy]
 
   get "/profile", to: "profiles#show"
+  get "/search", to: "areas#search"
 end
