@@ -7,6 +7,13 @@
 <%= @line.grade %>
 <%= @line.category %>
 <%= @line.description %>
+<br><br>
+
+<% if @line.photo.attached? %>
+  <%= cl_image_tag @line.photo.key, width: 500, crop: :fill %>
+<% else %>
+  <p>No picture available</p>
+<% end %>
 <br>
 
 <%= link_to "Log Climb", new_line_climb_path(@line), class: "btn btn-main" %>

@@ -1,5 +1,6 @@
 class TipsController < ApplicationController
   before_action :set_line, only: %i[new create]
+  before_action :set_tip, only: %i[edit update destroy]
 
   def new
     @tip = Tip.new
@@ -20,31 +21,34 @@ class TipsController < ApplicationController
   end
 
   def edit
-    @tip = Tip.find(params[:id])
     authorize(@tip)
   end
 
   def update
-    @tip = Tip.find(params[:id])
+    authorize(@tip)
+
     if @tip.update(tip_params)
       redirect_to line_path(@tip.line)
     else
       render :edit, status: :unprocessable_entity
     end
-    authorize(@tip)
   end
 
   def destroy
-    @tip = Tip.find(params[:id])
+    authorize(@tip)
+
     @tip.destroy
     redirect_to line_path(@tip.line), status: :see_other
-    authorize(@tip)
   end
 
   private
 
   def set_line
     @line = Line.find(params[:line_id])
+  end
+
+  def set_tip
+    @tip = Tip.find(params[:id])
   end
 
   def tip_params

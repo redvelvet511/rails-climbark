@@ -6,6 +6,10 @@ class ClimbsController < ApplicationController
     @climbs = policy_scope(Climb)
   end
 
+  def show
+    authorize(@climb)
+  end
+
   def new
     @climb = Climb.new
     authorize(@climb)
@@ -24,19 +28,14 @@ class ClimbsController < ApplicationController
     end
   end
 
-  def show
-    authorize(@climb)
-  end
-
   def edit
     authorize(@climb)
   end
 
   def update
-    @climb.update(climb_params)
     authorize(@climb)
 
-    if @climb.save
+    if @climb.update(climb_params)
       redirect_to climb_path(@climb)
     else
       render :edit, status: 422
@@ -44,8 +43,9 @@ class ClimbsController < ApplicationController
   end
 
   def destroy
-    @climb.destroy
     authorize(@climb)
+
+    @climb.destroy
     redirect_to climbs_path, status: 303 # see_other
   end
 
