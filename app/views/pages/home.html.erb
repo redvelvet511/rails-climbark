@@ -1,6 +1,6 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1617647549655-d0cafe2ed909?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3087&q=80);">
-  <div class="container">
-    <h1>Hey, ready to climb? </h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1598438924166-6d89ca57f248?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80);">
+    <p>Hey, ready to climb?</p>
+    <br>
     <%= form_with url: search_path, method: :get, class: "d-flex" do %>
       <%= text_field_tag :query,
         params[:query],
@@ -9,39 +9,23 @@
       %>
       <%= submit_tag "Search", class: "btn btn-primary" %>
     <% end %>
+</div>
+  <div class="recommendation-section">
+    <p id="recommendation">Areas nearest to you</p>
+    <div class="recommendation-cards">
+      <div class="recommendation-card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1549880181-56a44cf4a9a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)">
+        Area 1
+      </div>
+      <div class="recommendation-card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1544198365-f5d60b6d8190?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80">
+        Area 3
+      </div>
+      <div class="recommendation-card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1480497490787-505ec076689f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80">
+        Area 3
+      </div>
+    </div>
+    <p id="see-all"><%= link_to "See all", areas_path %></p>
   </div>
 </div>
-
-<br>
-<br>
-
-<p id="recommendation">Recommendation</p>
-
-<div class="recommendation-cards">
-  <div class="recommendation-card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-    Area 1
-  </div>
-  <div class="recommendation-card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-    Area 3
-  </div>
-  <div class="recommendation-card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-    Area 3
-  </div>
-</div>
-
-<%= link_to "See all areas", areas_path %>
-
-<br>
-<br>
-
-<div class="tip-cards">
-  <div class="tip-card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-    Climb Count:
-  </div>
-  <div class="tip-card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-    10 Safety Tips
-  </div>
-  <div class="tip-card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-    8 Climbing Tips
-  </div>
+<div class="homepage-map">
+  <img src="https://www.theclick.gg/wp-content/uploads/2021/08/Genshin-Impact-World-Map.jpg" width= "300px" alt="Temporary Map">
 </div>
