@@ -33,6 +33,11 @@ area_lines_data.each do |area|
       area: new_area
     )
     new_line.save
+
+    next if line["photo_url"].nil? || !new_line.persisted?
+
+    line_photo_file = URI.open(line["photo_url"])
+    new_line.photo.attach(io: line_photo_file, filename: "#{line['name']}.jpg", content_type: "image/jpg")
   end
   p "Created #{new_area.lines.count} line(s) for #{new_area.name}."
 
