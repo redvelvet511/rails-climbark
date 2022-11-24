@@ -3,13 +3,13 @@
     <h1>Hey, ready to climb? </h1>
 
     <%= form_with url: search_path, method: :get, class: "d-flex" do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find an area or a route"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find an area or a route"
+      %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
   </div>
 </div>
 

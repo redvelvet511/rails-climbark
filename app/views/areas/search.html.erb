@@ -1,0 +1,11 @@
+<h1>Areas</h1>
+
+<ul>
+  <% @search.each do |area| %>
+    <li>
+      <%= link_to area.name, area_lines_path(area) %>
+      <% if area.photo.key %>
+        <%= cl_image_tag area.photo.key, height: 100, width: 100, crop: :fill %>
+      <% end %>
+  <% end %>
+</ul>
