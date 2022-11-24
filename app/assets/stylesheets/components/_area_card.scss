@@ -1,0 +1,29 @@
+.area-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 345px;
+  margin: 0 15px;
+}
+
+.area-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 326px;
+  height: 158px;
+  margin-bottom: 15px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  text-align: center;
+
+  p {
+    width: 60%;
+    margin: 0;
+    color: white;
+    font-size: 28px;
+    text-shadow: 0 0 3px rgba(0,0,0,0.3);
+  }
+}
