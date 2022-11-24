@@ -10,3 +10,15 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+// Global settings
+
+$footer-height: 43px;
+
+.footer-spacer {
+  height: $footer-height;
+}
+
+a {
+  text-decoration: none;
+}
