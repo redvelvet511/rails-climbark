@@ -3,6 +3,9 @@ def scrape_line_details(line_url)
   line_doc = Nokogiri::HTML(line_file)
   desc_loc_proc = line_doc.search(".fr-view").map { |element| element.text.strip }
 
+  line_photo_page_node = line_doc.search("#carousel-item-0 a")
+  line_photo_url = line_photo_page_node.empty? ? nil : scrape_photo_url(line_photo_page_node)
+
   {
     name: line_doc.search("h1").text.strip,
     grade: line_doc.search(".inline-block .rateYDS").text.strip.split.first,
@@ -10,7 +13,8 @@ def scrape_line_details(line_url)
     description: desc_loc_proc[0],
     location: desc_loc_proc[1],
     protection: desc_loc_proc[2],
-    url: line_url
+    url: line_url,
+    photo_url: line_photo_url
   }
 end
 
