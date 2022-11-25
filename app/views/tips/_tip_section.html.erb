@@ -12,14 +12,16 @@
 
         <div class="tip-title-and-actions">
           <p class="tip-title"><%= tip.title? ? tip.title : "Untitled" %></p>
-          <div class="tip-actions">
-            <%= link_to(edit_tip_path(tip)) do %>
-              <i class="fa-solid fa-square-pen"></i>
-            <% end %>
-            <%= link_to(tip_path(tip), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} ) do %>
-              <i class="fa-solid fa-square-minus"></i>
-            <% end %>
-          </div>
+          <% if tip.user == current_user %>
+            <div class="tip-actions">
+              <%= link_to(edit_tip_path(tip)) do %>
+                <i class="fa-solid fa-square-pen"></i>
+              <% end %>
+              <%= link_to(tip_path(tip), data: {turbo_method: :delete, turbo_confirm: "Delete this tip?"} ) do %>
+                <i class="fa-solid fa-square-minus"></i>
+              <% end %>
+            </div>
+          <% end %>
         </div>
 
         <p class="tip-content"><%= tip.content %></p>

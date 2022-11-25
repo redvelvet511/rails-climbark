@@ -1,4 +1,5 @@
 .line-details-container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,6 +7,22 @@
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
+}
+
+.line-photo-toggler {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0 0 1px 1px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 0 rgba(0,0,0,0.3);
+  font-size: 16px;
 }
 
 .line-details-box {
@@ -25,7 +42,11 @@
 
   .line-header > a {
     display: inline-block;
-    color: $dirty-orange;
+    color: black;
+    font-size: 18px;
+  }
+
+  .line-header > i {
     font-size: 18px;
   }
 
