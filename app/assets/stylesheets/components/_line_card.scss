@@ -16,6 +16,24 @@
 //   text-decoration: underline;
 // }
 
+.line-tabs {
+  width: 312px;
+  margin: 0 auto;
+  font-size: 16px;
+  display: flex;
+
+  p {
+    margin-bottom: 15px;
+    margin-right: 10px;
+    border-bottom: 2px solid transparent;
+  }
+
+  .selected-tab {
+    font-weight: bold;
+    border-bottom: 2px solid black;
+  }
+}
+
 .line-cards {
   display: flex;
   flex-direction: column;
@@ -29,16 +47,14 @@
   width: 332px;
   height: 73px;
   display: flex;
+  margin-bottom: 10px;
   background-color: $dirty-orange;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.line-card-image {
-  object-fit: cover;
+  box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
 
   img {
+    object-fit: cover;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     height: 73px;
@@ -47,34 +63,34 @@
 }
 
 .line-card-infos {
-  margin-left: 10px;
-  padding-top: 5px;
-  width: 250px;
+  margin-left: 12px;
+  width: 235px;
+  white-space: nowrap;
+  overflow: hidden;
 
-  .line-category {
+  p {
+    margin: 0;
     color: white;
+  }
+
+  .line-card-name a {
+    font-size: 16px;
+    margin-top: 9px;
+    display: inline-block;
+    color: white;
+  }
+
+  .line-card-category-and-grade {
     font-size: 15px;
-    font-weight: lighter;
-  }
-
-  .line-name-and-grade {
+    font-weight: 300;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    height: 30px;
-    padding-top: 5px;
-
-    .line-name a {
-      color: white;
-      font-size: 15px;
-      text-decoration: none;
-      margin-bottom: 0px;
-    }
-
-    .line-grade {
-      color: white;
-      text-align: right;
-      font-size: 15px;
-    }
+    margin-top: 6px;
   }
 
+    .line-grade > i {
+      padding-right: 4px;
+      font-size: 13px;
+    }
 }
