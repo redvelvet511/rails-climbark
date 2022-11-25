@@ -1,6 +1,6 @@
 <%# All Routes in Area (index) %>
 
-<%= render "shared/search_bar" %>
+<%= render "shared/search_bar_with_back", path: areas_path %>
 
 <div class="line-tabs">
   <p class="line-tab selected-tab">All Routes</p>
@@ -33,9 +33,5 @@
 <div class="footer-spacer"></div>
 
 <%# <p class="area-name-of-route">Routes in <%= @area.name %>
-
-<%# link_to areas_path do %>
-  <%# <i class="fa-solid fa-arrow-left-long"></i> %>
-<%# end %>
 
 <%# link_to "Suggested routes in #{@area.name}", area_suggested_lines_path(@area) %>
