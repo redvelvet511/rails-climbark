@@ -12,7 +12,9 @@
 
   <body>
     <%= render "shared/flashes" %>
-    <%= render "shared/footer" %>
+    <% unless action_name == "landing" %>
+      <%= render 'shared/footer' %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
