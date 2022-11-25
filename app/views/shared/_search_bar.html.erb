@@ -1,10 +1,12 @@
-<%= form_with url: search_path, method: :get, class: "search-form" do %>
-  <%= text_field_tag :query,
-    params[:test],
-    class: "form-control search-field",
-    placeholder: "Find an area or a route"
-  %>
-  <%= button_tag(class: "search-button") do %>
-    <i class="fa-solid fa-magnifying-glass"></i>
+<div class="search-bar">
+  <%= form_with url: search_path, method: :get, class: "search-form" do %>
+    <%= text_field_tag :query,
+      params[:test],
+      class: "form-control search-field",
+      placeholder: "Find an area or a route"
+    %>
+    <%= button_tag(class: "search-button") do %>
+      <i class="fa-solid fa-magnifying-glass"></i>
+    <% end %>
   <% end %>
-<% end %>
+</div>

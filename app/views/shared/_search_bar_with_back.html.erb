@@ -1,0 +1,21 @@
+<div class="search-bar search-bar-with-back">
+  <%= form_with url: search_path, method: :get, class: "search-form" do %>
+    <div class="input-group">
+      <button type="button">
+        <%= link_to(path) do %>
+          <i class="fa-solid fa-arrow-left-long"></i>
+        <% end %>
+      </button>
+
+      <%= text_field_tag :query,
+        params[:test],
+        class: "form-control search-field",
+        placeholder: "Find an area or a route"
+      %>
+    </div>
+
+    <%= button_tag(class: "search-button") do %>
+      <i class="fa-solid fa-magnifying-glass"></i>
+    <% end %>
+  <% end %>
+</div>
