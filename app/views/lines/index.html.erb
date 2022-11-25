@@ -2,14 +2,23 @@
   <i class="fa-solid fa-arrow-left-long"></i>
 <% end %>
 
-<h1>Routes in <%= @area.name %></h1>
+<p class="area-name-of-route">Routes in <%= @area.name %></p>
 
-<ul>
+<p class="area-name-of-route-all">All</p>
+
+<div class="line-cards">
   <% @lines.each do |line| %>
-    <li>
-      <%= link_to line.name, line_path(line) %>
-      <%= line.grade %>
-      <%= line.category %>
-    </li>
+    <div class="line-card">
+      <div class="line-card-image">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"/>
+      </div>
+      <div class="line-card-infos">
+        <div class="line-name-and-grade">
+          <p class="line-name"><%= link_to line.name, line_path(line) %></p>
+          <p class="line-grade"><%= line.grade %></p>
+        </div>
+        <p class="line-category">Type: <%= line.category.capitalize %></p>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>
