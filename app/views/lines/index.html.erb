@@ -1,26 +1,37 @@
-<%= link_to areas_path do %>
-  <i class="fa-solid fa-arrow-left-long"></i>
-<% end %>
+<%# All Routes in Area (index) %>
 
-<p class="area-name-of-route">Routes in <%= @area.name %></p>
+<%= render "shared/search_bar_with_back", path: areas_path %>
 
-<p class="area-name-of-route-all">All</p>
+<div class="line-tabs">
+  <p class="line-tab selected-tab">All Routes</p>
+  <p class="line-tab">Recommended for You</p>
+</div>
 
 <div class="line-cards">
   <% @lines.each do |line| %>
     <div class="line-card">
       <div class="line-card-image">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"/>
+        <% if line.photo.attached? %>
+          <%= cl_image_tag(line.photo.key) %>
+        <% else %>
+          <%= image_tag "line_placeholder.jpg" %>
+        <% end %>
       </div>
+
       <div class="line-card-infos">
-        <div class="line-name-and-grade">
-          <p class="line-name"><%= link_to line.name, line_path(line) %></p>
-          <p class="line-grade"><%= line.grade %></p>
+        <p class="line-card-name"><%= link_to line.name, line_path(line) %></p>
+
+        <div class="line-card-category-and-grade">
+          <p class="line-category">Type: <%= line.category.capitalize %></p>
+          <p class="line-grade"><i class="fa-solid fa-mountain"></i><%= line.grade %></p>
         </div>
-        <p class="line-category">Type: <%= line.category.capitalize %></p>
       </div>
     </div>
   <% end %>
 </div>
 
-<%= link_to "Suggested routes in #{@area.name}", area_suggested_lines_path(@area) %>
+<div class="footer-spacer"></div>
+
+<%# <p class="area-name-of-route">Routes in <%= @area.name %>
+
+<%# link_to "Suggested routes in #{@area.name}", area_suggested_lines_path(@area) %>
