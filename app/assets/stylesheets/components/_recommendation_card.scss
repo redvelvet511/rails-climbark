@@ -1,60 +1,45 @@
-#recommendation {
-  font-size: 18px;
+.recommendation-section {
+  background-color: white;
+  margin: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+
+  #recommendation {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  #see-all {
+    text-align: right;
+    margin-bottom: 0px;
+
+    a {
+      color: black;
+      text-decoration: underline;
+    }
+  }
 }
 
 .recommendation-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-  width: 600px;
-}
-
-// Smallest device
-@media (min-width: 100px) and (max-width: 575px) {
-  .recommendation-cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  .recommendation-cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .recommendation-cards {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .recommendation-cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  .recommendation-cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+  grid-gap: 10px;
+  width: 330px;
+  margin-top: none;
 }
 
 .recommendation-card-info {
   background-size: cover;
   background-position: center;
-  height: 180px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 18px;
+  text-shadow: 3px 3px 3px rgba(0,0,0,100%);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }

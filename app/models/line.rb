@@ -7,6 +7,8 @@ class Line < ApplicationRecord
   has_many :users, through: :climbs
   has_many :tips, dependent: :destroy
 
+  has_one_attached :photo
+
   validates :name, presence: true
   validates :grade, presence: true, inclusion: { in: GRADES_LIST }
   validates :category, presence: true, inclusion: { in: CATEGORIES }

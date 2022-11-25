@@ -1,0 +1,77 @@
+.area-name-of-route {
+  margin: 15px;
+  font-size: 18px;
+  border: 0px;
+  margin-bottom: -10px;
+  text-align: center;
+}
+
+.area-name-of-route-all {
+  margin: 15px;
+  font-size: 18px;
+  border: 0px;
+  margin-bottom: -10px;
+  margin-top: 10px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.line-cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.line-card {
+  height: 73px;
+  margin: 15px;
+  margin-bottom: -5px;
+  display: flex;
+  background-color: $dirty-orange;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.line-card-image {
+  object-fit: cover;
+
+  img {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 73px;
+    width: 73px;
+  }
+}
+
+.line-card-infos {
+  margin-left: 10px;
+  padding-top: 5px;
+  width: 250px;
+
+  .line-category {
+    color: white;
+    font-size: 15px;
+    font-weight: lighter;
+  }
+
+  .line-name-and-grade {
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    padding-top: 5px;
+
+    .line-name a {
+      color: white;
+      font-size: 15px;
+      text-decoration: none;
+      margin-bottom: 0px;
+    }
+
+    .line-grade {
+      color: white;
+      text-align: right;
+      font-size: 15px;
+    }
+  }
+
+}

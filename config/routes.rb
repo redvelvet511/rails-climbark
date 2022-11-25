@@ -16,5 +16,7 @@ Rails.application.routes.draw do
   resources :tips, only: %i[edit update destroy]
 
   get "/profile", to: "profiles#show"
+  get "/search", to: "areas#search"
+  
   # get "/areas/:area_id/suggested_lines", to: "lines#suggested_lines"
 end

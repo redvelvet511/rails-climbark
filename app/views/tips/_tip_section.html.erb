@@ -1,18 +1,33 @@
-<% @tips.each do |tip| %>
-  <div class="tip-card">
-    <strong><%= tip.title? ? tip.title : "Untitled" %></strong>
-    <br>
-    <%= tip.content %>
+<div class="tip-cards">
+  <% if !@tips.empty? %>
+    <% @tips.each do |tip| %>
+      <div class="tip-card">
+        <div class="tip-user">
+          <%= image_tag "user_placeholder.jpg" %>
+          <div class="tip-user-info">
+            <p class="tip-username"><%= tip.user.username %></p>
+            <p class="tip-date"><%= tip.created_at.strftime("%B %e, %Y") %></p>
+          </div>
+        </div>
 
-    <%= link_to(edit_tip_path(tip)) do %>
-      <i class="fa-solid fa-square-pen"></i>
-    <% end %>
+        <div class="tip-title-and-actions">
+          <p class="tip-title"><%= tip.title? ? tip.title : "Untitled" %></p>
+          <% if tip.user == current_user %>
+            <div class="tip-actions">
+              <%= link_to(edit_tip_path(tip)) do %>
+                <i class="fa-solid fa-square-pen"></i>
+              <% end %>
+              <%= link_to(tip_path(tip), data: {turbo_method: :delete, turbo_confirm: "Delete this tip?"} ) do %>
+                <i class="fa-solid fa-square-minus"></i>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
 
-    <%= link_to(tip_path(tip), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} ) do %>
-      <i class="fa-solid fa-square-minus"></i>
+        <p class="tip-content"><%= tip.content %></p>
+      </div>
     <% end %>
-    <br>
-    <em>Left by <%= tip.user.username %> on <%= tip.created_at %></em>
-  </div>
-  <br>
-<% end %>
+  <% else %>
+    <p class="no-tip-text text-center">No tips available yet for this route.</p>
+  <% end %>
+</div>
