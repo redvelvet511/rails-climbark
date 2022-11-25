@@ -1,31 +1,57 @@
-<%= link_to area_lines_path(@line.area) do %>
-  <i class="fa-solid fa-arrow-left-long"></i>
-<% end %>
+<%# Line Details (show) %>
 
-<h1><%= @line.name %></h1>
+<div class="line-details-container">
+  <div class="line-details-box">
+    <div class="line-header">
+      <%= link_to area_lines_path(@line.area) do %>
+        <i class="fa-solid fa-arrow-left-long"></i>
+      <% end %>
+      <h6><%= @line.name %></h6>
+      <%= link_to "#" do %>
+        <i class="fa-solid fa-camera-retro"></i>
+      <% end %>
+    </div>
 
-<%= @line.grade %>
-<%= @line.category %>
-<%= @line.description %>
-<br><br>
+    <div class="line-grade-and-category">
+      <p>Grade: <%= @line.grade %></p>
+      <p>Type: <%= @line.category.capitalize %></p>
+    </div>
 
-<% if @line.photo.attached? %>
-  <%= cl_image_tag @line.photo.key, width: 500, crop: :fill %>
-<% else %>
-  <p>No picture available</p>
-<% end %>
-<br>
+    <p class="line-text"><%= @line.description %></p>
 
-<%= link_to "Log Climb", new_line_climb_path(@line), class: "btn btn-main" %>
-<%= link_to "Leave Tip", new_line_tip_path(@line), class: "btn btn-main" %>
-<br>
+    <p class="line-subheading">Location</p>
+    <p class="line-text"><%= @line.location %></p>
 
-<h3>Tips for this route</h3>
+    <p class="line-subheading">Protection</p>
+    <p class="line-text"><%= @line.protection %></p>
 
-<% if user_signed_in? %>
-  <%= render "tips/tip_section", tips: @tips %>
-<% else %>
-  <p><%= link_to "Sign in", new_user_session_path %> to view tips left by other climbers on this route!</p>
-<% end %>
+    <div class="text-center">
+      <%= link_to "Log Climb", new_line_climb_path(@line), class: "btn btn-custom-thin btn-custom-thin-green" %>
+    </div>
 
-<%= link_to "Back to routes in #{@line.area.name}", area_lines_path(@line.area) %>
+    <hr>
+
+    <p class="line-subheading">Tips</p>
+
+    <% if user_signed_in? %>
+      <%= render "tips/tip_section", tips: @tips %>
+      <div class="text-center">
+        <%= link_to "Leave a Tip", new_line_tip_path(@line), class: "btn btn-custom-thin" %>
+      </div>
+    <% else %>
+      <p class="be-user-prompt text-center">
+        <%= link_to "Sign up", new_user_registration_path %> or
+        <%= link_to "log in", new_user_session_path %>
+        to view tips left by other climbers on this route!
+      </p>
+    <% end %>
+  </div>
+</div>
+
+<div class="footer-spacer"></div>
+
+    <%# if @line.photo.attached? %>
+      <%# cl_image_tag @line.photo.key, width: 500, crop: :fill %>
+    <%# else %>
+      <%# <p>No picture available</p> %>
+    <%# end %>
