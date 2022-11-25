@@ -1,10 +1,6 @@
-<%= link_to areas_path do %>
-  <i class="fa-solid fa-arrow-left-long"></i>
-<% end %>
+<%# All Routes in Area (index) %>
 
-<p class="area-name-of-route">Routes in <%= @area.name %></p>
-
-<p class="area-name-of-route-all">All</p>
+<%= render "shared/search_bar" %>
 
 <div class="line-cards">
   <% @lines.each do |line| %>
@@ -22,3 +18,13 @@
     </div>
   <% end %>
 </div>
+
+<div class="footer-spacer"></div>
+
+<%# <p class="area-name-of-route-all">All</p> %>
+
+<%# <p class="area-name-of-route">Routes in <%= @area.name %>
+
+<%# link_to areas_path do %>
+  <%# <i class="fa-solid fa-arrow-left-long"></i> %>
+<%# end %>
