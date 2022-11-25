@@ -1,19 +1,32 @@
 .leave-tip-box {
   width: 300px;
-  margin: 30px auto 20px auto;
   background-color: white;
-  padding: 30px;
+  padding: 20px;
   border-radius: 15px;
   box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.2);
+}
+
+.button-and-route {
+  display: flex;
+  justify-content: space-around;
+}
+
+.fa-arrow-left-long {
+  color: black;
 }
 
 .tip-route {
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 5px;
+  text-align: center;
 }
 
 .tip-instruction {
   font-size: 12px;
   font-weight: 300;
+}
+
+.leave-tip {
+  margin-left: 70px;
 }

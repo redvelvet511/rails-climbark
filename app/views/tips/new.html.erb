@@ -1,15 +1,27 @@
-<%= link_to line_path(@line) do %>
-  <i class="fa-solid fa-arrow-left-long"></i>
+<% if @line.photo.attached? %>
+  <% url = cl_image_path(@line.photo.key) %>
+<% else %>
+  <% url = image_path("line_placeholder.jpg") %>
 <% end %>
 
-<div class="leave-tip-box">
-  <p class="tip-route">Add a tip for <%= @line.name %></p>
-  <p class="tip-instruction"">Leave a tip on this route for future climbers</p>
+<div class="line-details-container" style="background-image:url(<%= url %>)" data-controller="line-photo">
+  <div class="line-photo-toggler d-none" data-action="click->line-photo#hidePhoto" data-line-photo-target="toggler">
+    <i class="fa-solid fa-info"></i>
+  </div>
+  <div class="leave-tip-box">
+    <div class="button-and-route">
+      <%= link_to line_path(@line) do %>
+        <i class="fa-solid fa-arrow-left-long"></i>
+      <% end %>
+      <p class="tip-route">Add a tip for <%= @line.name %></p>
+    </div>
+    <p class="tip-instruction"">Leave a tip on this route for future climbers</p>
 
-  <%= simple_form_for [@line, @tip] do |f| %>
-    <%= f.input :title %>
-    <%= f.input :content %>
-    <%# f.input :photo, as: :file %>
-    <%= f.submit class: "btn "%>
-  <% end %>
+    <%= simple_form_for [@line, @tip] do |f| %>
+      <%= f.input :title %>
+      <%= f.input :content %>
+      <%# f.input :photo, as: :file %>
+      <%= f.submit class: "btn btn-custom-thin leave-tip"%>
+    <% end %>
+  </div>
 </div>
