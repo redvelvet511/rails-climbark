@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :areas, only: %i[index] do
     resources :lines, only: %i[index]
+    get "/suggested_lines", to: "lines#suggested_lines"
   end
 
   resources :lines, only: :show do
@@ -17,4 +18,6 @@ Rails.application.routes.draw do
   get "/profile", to: "profiles#show"
   get "/search", to: "areas#search"
   get "/home", to: "pages#home"
+  
+  # get "/areas/:area_id/suggested_lines", to: "lines#suggested_lines"
 end
