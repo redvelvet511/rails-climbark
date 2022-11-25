@@ -19,7 +19,7 @@ Climb.create!([
   },
   {
     status: "attempted",
-    description: "Didn't finish, need to work on crimps.",
+    description: "Too hard",
     completion_date: Date.today - 5,
     line: Line.find(7),
     user: User.find_by(username: "Redvelvet")
