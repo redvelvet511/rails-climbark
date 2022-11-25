@@ -1,0 +1,62 @@
+.tip-cards {
+  margin: 14px auto;
+}
+
+.tip-card {
+  .tip-user {
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+  }
+
+  .tip-user-info {
+    margin-left: 10px;
+  }
+
+  .tip-username {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .tip-date {
+    margin: 0;
+    line-height: 13px;
+    color: $dark-grey;
+    font-size: 13px;
+  }
+
+  .tip-title-and-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 5px 0;
+  }
+
+  .tip-title {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .tip-actions .fa-solid {
+    margin-left: 2px;
+    color: $dirty-orange;
+    font-size: 15px;
+  }
+
+  .tip-content {
+    font-size: 14px;
+    font-weight: 300;
+  }
+}
+
+.no-tip-text {
+  font-size: 14px;
+  font-style: italic;
+}
