@@ -1,6 +1,12 @@
 <%# Line Details (show) %>
 
-<div class="line-details-container">
+<% if @line.photo.attached? %>
+  <% url = cl_image_path(@line.photo.key) %>
+<% else %>
+  <% url = image_path("line_placeholder.jpg") %>
+<% end %>
+
+<div class="line-details-container" style="background-image:url(<%= url %>)">
   <div class="line-details-box">
     <div class="line-header">
       <%= link_to area_lines_path(@line.area) do %>
@@ -20,10 +26,18 @@
     <p class="line-text"><%= @line.description %></p>
 
     <p class="line-subheading">Location</p>
-    <p class="line-text"><%= @line.location %></p>
+    <% if @line.location %>
+      <p class="line-text"><%= @line.location %></p>
+    <% else %>
+      <p class="line-text" style="font-style:italic">No information available.</p>
+    <% end %>
 
     <p class="line-subheading">Protection</p>
-    <p class="line-text"><%= @line.protection %></p>
+    <% if @line.protection %>
+      <p class="line-text"><%= @line.protection %></p>
+    <% else %>
+      <p class="line-text" style="font-style:italic">No information available.</p>
+    <% end %>
 
     <div class="text-center">
       <%= link_to "Log Climb", new_line_climb_path(@line), class: "btn btn-custom-thin btn-custom-thin-green" %>
@@ -49,9 +63,3 @@
 </div>
 
 <div class="footer-spacer"></div>
-
-    <%# if @line.photo.attached? %>
-      <%# cl_image_tag @line.photo.key, width: 500, crop: :fill %>
-    <%# else %>
-      <%# <p>No picture available</p> %>
-    <%# end %>
