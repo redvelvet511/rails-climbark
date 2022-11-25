@@ -7,13 +7,13 @@ class LinesController < ApplicationController
   end
 
   def show
-    authorize(@line)
     @line = Line.find(params[:id])
+    authorize(@line)
     @tips = @line.tips
   end
 
   def suggested_lines
-    skip_authorization # pundit to be completed
+    skip_authorization
     @area = Area.find(params[:area_id])
     @lines = @area.lines.where(grade: 5.10..5.12)
     # @lines = policy_scope(Line).where(area: @area)

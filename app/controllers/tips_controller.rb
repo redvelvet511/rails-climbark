@@ -3,11 +3,12 @@ class TipsController < ApplicationController
   before_action :set_tip, only: %i[edit update destroy]
 
   def new
+    # skip_authorization
     @tip = Tip.new
     authorize(@line, policy_class: TipPolicy)
   end
 
-  def create
+  def create  
     @tip = Tip.new(tip_params)
     @tip.line = @line
     @tip.user = current_user
