@@ -1,13 +1,31 @@
 .profile-container {
   margin: 15px;
+  padding: 5px;
+
+  .log-out {
+    text-align: right;
+
+    a {
+      color: black;
+    }
+  }
+
+  .profile-name {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+  }
 
   .profile-header {
     text-align: center;
+    padding-top: 5px;
+  }
 
-    .profile-name {
-      font-weight: bold;
-      font-size: 18px;
-    }
+  .profile-pic-banner {
+    background-size: cover;
+    background-position: center;
+    padding: 0 0;
+    height: 170px;
   }
 
   .profile-image {
@@ -15,9 +33,8 @@
     justify-content: center;
   }
 
-
   .user-information {
-    margin-top: 10px;
+    margin-top: -10px;
     display: flex;
     justify-content: space-around;
 
@@ -56,5 +73,10 @@
         font-weight: bold;
       }
     }
+  }
+
+  .view-all-my-climbs a {
+    color: black;
+    font-weight: bold;
   }
 }
