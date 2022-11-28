@@ -12,8 +12,6 @@ class PagesController < ApplicationController
       @area3 = Area.near([46.469, -80.976], 140, order: :distance).third
     ]
 
-    @areas = Area.all
-
     @markers = @recommended_areas.map do |recommended_area|
       {
         lat: recommended_area.latitude,
