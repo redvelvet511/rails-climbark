@@ -12,3 +12,9 @@ application.register("line-photo", LinePhotoController)
 
 import NearAreasController from "./near_areas_controller"
 application.register("near-areas", NearAreasController)
+
+import ListLinesController from "./list_lines_controller"
+application.register("list-lines", ListLinesController)
+
+import MapController from "./map_controller"
+application.register("map", MapController)

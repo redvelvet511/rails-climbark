@@ -8,6 +8,17 @@ class PagesController < ApplicationController
     @area1 = Area.near([46.469, -80.976], 140, order: :distance).first
     @area2 = Area.near([46.469, -80.976], 140, order: :distance).second
     @area3 = Area.near([46.469, -80.976], 140, order: :distance).third
+    
+    @areas = Area.all
+
+    @markers = @areas.map do |area|
+      {
+        lat: area.latitude,
+        lng: area.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {area: area}),
+        image_url: helpers.asset_url("mtn.png")
+      }
+    end
   end
 end
 

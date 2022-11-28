@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :areas, only: %i[index] do
     resources :lines, only: %i[index]
-    get "/suggested_lines", to: "lines#suggested_lines"
+    get '/suggested_lines', to: "lines#suggested_lines"
   end
 
   resources :lines, only: :show do

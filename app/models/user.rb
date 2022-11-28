@@ -9,6 +9,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :climbs, dependent: :destroy
+  has_many :lines, through: :climbs
   has_many :tips, dependent: :destroy
 
   validates :username, presence: true, uniqueness: true, length: { in: 5..20 }

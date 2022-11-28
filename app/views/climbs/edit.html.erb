@@ -1,9 +1,16 @@
-<h1>Update <%= @climb.line.name %></h1>
+<div class="edit-log-climb-box">
+  <div class="arrow-and-title">
+    <%= link_to climbs_path do %>
+      <i class="fa-solid fa-arrow-left-long"></i>
+    <% end %>
+    <p>Update <%= @climb.line.name %></p>
+  </div>
 
-<%= simple_form_for [@line, @climb] do |f| %>
-  <%= f.input :description %>
-  <%= f.input :status, as: :select, collection: Climb::STATUSES.map { |s| [s.capitalize, s] } %>
-  <%# <%= f.input :photo, as: :file %>
-  <%= f.input :completion_date, as: :date, html5: true %>
-  <%= f.submit %>
-<% end %>
+  <%= simple_form_for [@line, @climb] do |f| %>
+    <%= f.input :description %>
+    <%= f.input :status, as: :select, collection: Climb::STATUSES.map { |s| [s.capitalize, s] } %>
+    <%# <%= f.input :photo, as: :file %>
+    <%= f.input :completion_date, as: :date, html5: true %>
+    <%= f.submit class: "btn btn-custom-thin update-climb-button"%>
+  <% end %>
+</div>
