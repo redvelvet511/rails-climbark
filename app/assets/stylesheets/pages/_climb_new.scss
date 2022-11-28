@@ -1,0 +1,33 @@
+.new-climb-box {
+  width: 300px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  overflow-y: scroll;
+
+  .button-and-route {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .button-and-route a {
+    margin-right: 6px;
+  }
+
+  .log-climb-for-route {
+    flex-grow: 1;
+    margin: 0;
+  }
+
+  .icon-width-spacer {
+    width: 22px;
+  }
+
+  .submit-climb-button {
+    background-color: $light-green;
+    margin-top: 8px;
+    margin-bottom: 5px;
+  }
+}
