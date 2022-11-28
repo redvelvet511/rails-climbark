@@ -2,32 +2,19 @@
 
 <%= render "shared/search_bar_with_back", path: areas_path %>
 
-<div class="line-tabs">
-  <p class="line-tab selected-tab">All Routes</p>
-  <p class="line-tab">Recommended for You</p>
-</div>
+<div data-controller="list-lines" data-list-lines-area-id-value="<%= @area.id %>">
+  <div class="line-tabs">
+    <p class="line-tab selected-tab"
+       data-list-lines-target="allTab"
+       data-action="click->list-lines#displayAll">All Routes</p>
+    <p class="line-tab"
+       data-list-lines-target="recommendedTab"
+       data-action="click->list-lines#displayRecommended">Recommended for You</p>
+  </div>
 
-<div class="line-cards">
-  <% @lines.each do |line| %>
-    <div class="line-card">
-      <div class="line-card-image">
-        <% if line.photo.attached? %>
-          <%= cl_image_tag(line.photo.key) %>
-        <% else %>
-          <%= image_tag "line_placeholder.jpg" %>
-        <% end %>
-      </div>
-
-      <div class="line-card-infos">
-        <p class="line-card-name"><%= link_to line.name, line_path(line) %></p>
-
-        <div class="line-card-category-and-grade">
-          <p class="line-category">Type: <%= line.category.capitalize %></p>
-          <p class="line-grade"><i class="fa-solid fa-mountain"></i><%= line.grade %></p>
-        </div>
-      </div>
-    </div>
-  <% end %>
+  <div class="line-cards" data-list-lines-target="list">
+    <%= render "lines_list", lines: @lines %>
+  </div>
 </div>
 
 <div class="footer-spacer"></div>

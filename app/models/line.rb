@@ -16,4 +16,10 @@ class Line < ApplicationRecord
 
   include PgSearch::Model
   multisearchable against: [:name, :category]
+
+  def self.highest_grade(lines)
+    grades_index = []
+    lines.each { |line| grades_index << GRADES_LIST.index(line.grade) }
+    GRADES_LIST[grades_index.max]
+  end
 end
