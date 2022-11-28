@@ -8,4 +8,35 @@
 
 .arrow-and-title {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+
+  .log-climb-name {
+    margin: 0 20px;
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+  }
+}
+
+.show-climb-arrow {
+  color: black;
+}
+
+.link-buttons-show-climb {
+  text-align: right;
+
+  a {
+    color: black;
+  }
+}
+
+.status-and-grade {
+  display: flex;
+  justify-content: space-between;
+
+  .climb-grade {
+    margin-right: 10px;
+  }
 }

@@ -4,6 +4,7 @@
 
   .log-out {
     text-align: right;
+    margin-bottom: 0px;
 
     a {
       color: black;
@@ -12,7 +13,7 @@
 
   .profile-name {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
   }
 
@@ -40,6 +41,12 @@
 
     .number-of-climb {
       text-align: center;
+      background-color: $light-green;
+      border-radius: 50%;
+      height: 80px;
+      width:80px;
+      padding-top: 8px;
+      font-size: 18px;
 
       .number-of-climb-title {
         margin: 5px;
@@ -52,6 +59,12 @@
 
     .number-of-tip {
       text-align: center;
+      background-color: $light-blue;
+      border-radius: 50%;
+      height: 80px;
+      width:80px;
+      padding-top: 8px;
+      font-size: 18px;
 
       .number-of-tip-title {
         margin: 5px;
@@ -64,6 +77,12 @@
 
     .current-grade {
       text-align: center;
+      background-color: $dirty-orange;
+      border-radius: 50%;
+      height: 80px;
+      width:80px;
+      padding-top: 8px;
+      font-size: 18px;
 
       .current-grade-title {
         margin: 5px;
@@ -75,8 +94,20 @@
     }
   }
 
-  .view-all-my-climbs a {
-    color: black;
-    font-weight: bold;
+  .log-climb-preview {
+    margin-top: 15px;
+    background-color: white;
+    height: 300px;
+    padding: 10px;
+
+    .view-all-my-climbs {
+      font-weight: bold;
+      text-align: right;
+
+      a {
+        color: black;
+        text-decoration: underline;
+      }
+    }
   }
 }
