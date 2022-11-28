@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[home search landing]
+  skip_before_action :authenticate_user!, only: %i[home search landing map]
 
   def landing
   end
