@@ -1,23 +1,31 @@
-<div class="profile-container">
-  <%= link_to(profile_path) do %>
-    <i class="fa-solid fa-arrow-left-long"></i>
-  <% end %>
-  <p class="my-climb-title">My Climbs</p>
+<div class="my-climbs-container">
+  <div class="header-profile-index">
+    <%= link_to(profile_path) do %>
+      <i class="fa-solid fa-arrow-left-long profile-climb-show-arrow"></i>
+    <% end %>
+    <p class="my-climb-title">My Climbs</p>
+  </div>
 
-  <div class="climb-log-card">
-    <% @climbs.each do |climb| %>
-      <div class="route-edit-delete">
-        <p><%= link_to climb.line.name, climb_path(climb) %></p>
-        <div class="edit-delete">
-          <%= link_to(edit_climb_path(climb)) do %>
-          <i class="fa-solid fa-square-pen"></i>
-          <% end %>
-          <%= link_to(climb_path(climb), data: {turbo_method: :delete, turbo_confirm: "Delete this tip?"} ) do %>
-            <i class="fa-solid fa-square-minus"></i>
-          <% end %>
+  <% @climbs.each do |climb| %>
+    <div class="climb-log-card">
+      <div class="status-color <%= climb.status %>"></div>
+      <div class="card-info-climb-log">
+        <div class="route-edit-delete">
+          <p class="climb-line-name"><%= link_to climb.line.name, climb_path(climb) %></p>
+          <div class="edit-delete">
+            <%= link_to(edit_climb_path(climb)) do %>
+            <i class="fa-solid fa-square-pen edit-climb-in-profile"></i>
+            <% end %>
+            <%= link_to(climb_path(climb), data: {turbo_method: :delete, turbo_confirm: "Delete this tip?"} ) do %>
+              <i class="fa-solid fa-square-minus delete-climb-in-profile"></i>
+            <% end %>
+          </div>
+        </div>
+        <div class="status-and-grade">
+          <p class="climbing-status climb">Status: <%= climb.status.capitalize %></p>
+          <p class="climb-grade"><%= climb.line.grade %></p>
         </div>
       </div>
-      <p class="climbing-status">Status: <%= climb.status.capitalize %></p>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>
