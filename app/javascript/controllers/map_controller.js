@@ -1,5 +1,4 @@
 import { Controller } from "@hotwired/stimulus"
-import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder"
 
 // Connects to data-controller="map"
 export default class extends Controller {
@@ -12,7 +11,7 @@ export default class extends Controller {
     mapboxgl.accessToken = this.apiKeyValue
 
     this.map = new mapboxgl.Map({
-      container: this.element, // container ID
+      container: this.element,
       style: "mapbox://styles/redvelvet511/clalhq8ke000r15phmmp8otwi"
     });
 
