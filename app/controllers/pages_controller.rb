@@ -1,14 +1,28 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[home search landing]
+  skip_before_action :authenticate_user!, only: %i[home search landing map]
 
   def landing
   end
 
   def home
-    @area1 = Area.near([46.469, -80.976], 140, order: :distance).first
-    @area2 = Area.near([46.469, -80.976], 140, order: :distance).second
-    @area3 = Area.near([46.469, -80.976], 140, order: :distance).third
 
+    @recommended_areas = [
+      @area1 = Area.near([46.469, -80.976], 140, order: :distance).first,
+      @area2 = Area.near([46.469, -80.976], 140, order: :distance).second,
+      @area3 = Area.near([46.469, -80.976], 140, order: :distance).third
+    ]
+
+    @markers = @recommended_areas.map do |recommended_area|
+      {
+        lat: recommended_area.latitude,
+        lng: recommended_area.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {area: recommended_area}),
+        image_url: helpers.asset_url("mtn.png")
+      }
+    end
+  end
+
+  def map
     @areas = Area.all
 
     @markers = @areas.map do |area|
