@@ -7,5 +7,7 @@ export default class extends Controller {
     navigator.geolocation.getCurrentPosition((loc) => {
       console.log(loc);
      })
+    }
   }
-}
+
+  

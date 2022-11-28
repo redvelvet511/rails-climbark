@@ -1,0 +1,16 @@
+.landing-bg {
+  max-width: 375px;
+  max-height: 667px;
+  height: 100vh;
+  width: 100%;
+  background-image: url("landing.jpg");
+  background-size: cover;
+  background-position: top left;
+  position: relative;
+}
+
+.homepage-button {
+  position: absolute;
+  top: 400px;
+  left: 42px;
+}

@@ -13,7 +13,7 @@ area_lines_data.each do |area|
     next
   end
 
-  new_area = Area.new(name: area["name"])
+  new_area = Area.new(name: area["name"], latitude: area["latitude"], longitude: area["longitude"])
   new_area.save!
   p "Created area #{new_area.name}."
 

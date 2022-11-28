@@ -1,0 +1,19 @@
+.log-climb-box {
+  width: 300px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.2);
+}
+
+.log-climb-route {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.submit-climb-button {
+  margin-left: 70px;
+  background-color: $light-green;
+}
