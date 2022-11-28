@@ -9,3 +9,6 @@ application.register("hello", HelloController)
 
 import LinePhotoController from "./line_photo_controller"
 application.register("line-photo", LinePhotoController)
+
+import MapController from "./map_controller"
+application.register("map", MapController)
