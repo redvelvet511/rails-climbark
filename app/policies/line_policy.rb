@@ -3,9 +3,9 @@ class LinePolicy < ApplicationPolicy
     true
   end
 
-  def suggested_lines?
-    true
-  end
+  # def suggested_lines?
+  #   true
+  # end
 
   class Scope < Scope
     def resolve
