@@ -11,6 +11,7 @@ class User < ApplicationRecord
   has_many :climbs, dependent: :destroy
   has_many :lines, through: :climbs
   has_many :tips, dependent: :destroy
+  has_one_attached :photo
 
   validates :username, presence: true, uniqueness: true, length: { in: 5..20 }
 end
