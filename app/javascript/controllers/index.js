@@ -10,6 +10,9 @@ application.register("hello", HelloController)
 import LinePhotoController from "./line_photo_controller"
 application.register("line-photo", LinePhotoController)
 
+import NearAreasController from "./near_areas_controller"
+application.register("near-areas", NearAreasController)
+
 import ListLinesController from "./list_lines_controller"
 application.register("list-lines", ListLinesController)
 
