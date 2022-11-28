@@ -12,3 +12,6 @@ application.register("line-photo", LinePhotoController)
 
 import ListLinesController from "./list_lines_controller"
 application.register("list-lines", ListLinesController)
+
+import MapController from "./map_controller"
+application.register("map", MapController)

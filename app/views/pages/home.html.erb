@@ -21,7 +21,9 @@
     </div>
     <p id="see-all"><%= link_to "See all", areas_path %></p>
   </div>
-</div>
-<div class="homepage-map">
-  <img src="https://www.theclick.gg/wp-content/uploads/2021/08/Genshin-Impact-World-Map.jpg" width= "300px" alt="Temporary Map">
+
+<div id="map" style="width: 375px; height: 256px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
