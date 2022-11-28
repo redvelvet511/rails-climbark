@@ -5,7 +5,8 @@ class PagesController < ApplicationController
   end
 
   def home
-    @latitude = Geocoder.search('Paris')
-    @latitude.first.coordinates
+    @area1 = Area.near([46.469, -80.976], 140, order: :distance).first
+    @area2 = Area.near([46.469, -80.976], 140, order: :distance).second
+    @area3 = Area.near([46.469, -80.976], 140, order: :distance).third
   end
 end

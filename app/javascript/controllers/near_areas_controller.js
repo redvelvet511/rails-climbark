@@ -10,4 +10,4 @@ export default class extends Controller {
     }
   }
 
-  
+  // dont need this anymore unless we use current location, then we make and AJAX request
