@@ -1,11 +1,11 @@
-<div class="profile-container">
   <%= link_to(profile_path) do %>
     <i class="fa-solid fa-arrow-left-long"></i>
   <% end %>
   <p class="my-climb-title">My Climbs</p>
 
-  <div class="climb-log-card">
+<div class="profile-climb-list-container">
     <% @climbs.each do |climb| %>
+    <div class="climb-log-card">
       <div class="route-edit-delete">
         <p><%= link_to climb.line.name, climb_path(climb) %></p>
         <div class="edit-delete">
@@ -19,5 +19,5 @@
       </div>
       <p class="climbing-status">Status: <%= climb.status.capitalize %></p>
     <% end %>
-  </div>
+    </div>
 </div>
