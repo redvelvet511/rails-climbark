@@ -1,6 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
 
-// Connects to data-controller="map"
 export default class extends Controller {
   static values = {
     markers: Array,
@@ -12,7 +11,7 @@ export default class extends Controller {
 
     this.map = new mapboxgl.Map({
       container: this.element,
-      style: "mapbox://styles/redvelvet511/clalhq8ke000r15phmmp8otwi"
+      style: "mapbox://styles/redvelvet511/clb084m7q000e14rzu6kxk4gf"
     });
 
     this.#addMarkersToMap()

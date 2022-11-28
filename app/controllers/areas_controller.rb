@@ -9,7 +9,7 @@ class AreasController < ApplicationController
         lat: area.latitude,
         lng: area.longitude,
         info_window: render_to_string(partial: "info_window", locals: {flat: flat}),
-        image_url: helpers.asset_url("REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS")
+        image_url: helpers.asset_url("marker.png")
       }
     end
   end
