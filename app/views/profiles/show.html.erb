@@ -1,5 +1,28 @@
-<h1><%= current_user.username %>'s Profile</h1>
+<div class="profile-container">
+  <p class="log-out"><%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete} %></p>
 
-<%= link_to "My Climbs", climbs_path %>
+  <div class="profile-header">
+    <div class="profile-pic-banner" style="background-image: url(/assets/pp.jpg);">
+      <p class="profile-name"><%= current_user.username.capitalize %></p>
+      <div class="profile-image">
+        <%= image_tag image_path("prof_pic_placeholder.jpeg"), class: "avatar-large", alt: "avatar" %>
+      </div>
+    </div>
+    <div class="user-information">
+      <div class="number-of-climb">
+       <p class="number-of-climb-title">Climbs</p>
+       <p class="number-of-climb-info">4</p>
+      </div>
+      <div class="number-of-tip">
+       <p class="number-of-tip-title">Tips</p>
+       <p class="number-of-tip-info">3</p>
+      </div>
+      <div class="current-grade">
+       <p class="current-grade-title">Grade</p>
+       <p class="current-grade-info">5.10a</p>
+      </div>
+    </div>
+  </div>
 
-<%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete} %>
+<p class="view-all-my-climbs"><%= link_to "View All My Climbs", climbs_path %></p>
+</div>

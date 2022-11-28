@@ -1,0 +1,82 @@
+.profile-container {
+  margin: 15px;
+  padding: 5px;
+
+  .log-out {
+    text-align: right;
+
+    a {
+      color: black;
+    }
+  }
+
+  .profile-name {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .profile-header {
+    text-align: center;
+    padding-top: 5px;
+  }
+
+  .profile-pic-banner {
+    background-size: cover;
+    background-position: center;
+    padding: 0 0;
+    height: 170px;
+  }
+
+  .profile-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .user-information {
+    margin-top: -10px;
+    display: flex;
+    justify-content: space-around;
+
+    .number-of-climb {
+      text-align: center;
+
+      .number-of-climb-title {
+        margin: 5px;
+      }
+
+      .number-of-climb-info {
+        font-weight: bold;
+      }
+    }
+
+    .number-of-tip {
+      text-align: center;
+
+      .number-of-tip-title {
+        margin: 5px;
+      }
+
+      .number-of-tip-info {
+        font-weight: bold;
+      }
+    }
+
+    .current-grade {
+      text-align: center;
+
+      .current-grade-title {
+        margin: 5px;
+      }
+
+      .current-grade-info {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .view-all-my-climbs a {
+    color: black;
+    font-weight: bold;
+  }
+}

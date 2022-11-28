@@ -1,11 +1,23 @@
-<h1>My Climbs</h1>
+<div class="profile-container">
+  <%= link_to(profile_path) do %>
+    <i class="fa-solid fa-arrow-left-long"></i>
+  <% end %>
+  <p class="my-climb-title">My Climbs</p>
 
-<% @climbs.each do |climb| %>
-  <p><%= link_to climb.line.name, climb_path(climb) %> |
-     <strong><%= climb.status %></strong> |
-     <%= link_to "Edit", edit_climb_path(climb) %> |
-     <%= link_to "Delete", climb_path(climb), data: {turbo_method: :delete, turbo_confirm: "Delete this climb?"} %>
-  </p>
-<% end %>
-
-<%= link_to "Back to profile", profile_path %>
+  <div class="climb-log-card">
+    <% @climbs.each do |climb| %>
+      <div class="route-edit-delete">
+        <p><%= link_to climb.line.name, climb_path(climb) %></p>
+        <div class="edit-delete">
+          <%= link_to(edit_climb_path(climb)) do %>
+          <i class="fa-solid fa-square-pen"></i>
+          <% end %>
+          <%= link_to(climb_path(climb), data: {turbo_method: :delete, turbo_confirm: "Delete this tip?"} ) do %>
+            <i class="fa-solid fa-square-minus"></i>
+          <% end %>
+        </div>
+      </div>
+      <p class="climbing-status">Status: <%= climb.status.capitalize %></p>
+    <% end %>
+  </div>
+</div>
