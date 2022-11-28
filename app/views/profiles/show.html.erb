@@ -25,7 +25,29 @@
   </div>
 
   <div class="log-climb-preview">
-    <%= @recent_climbs %>
+    <% @recent_climbs.each do |recent_climb| %>
+      <div class="climb-log-card">
+        <div class="status-color <%= recent_climb.status %>"></div>
+        <div class="card-info-climb-log">
+          <div class="route-edit-delete">
+            <p class="climb-line-name"><%= link_to recent_climb.line.name, climb_path(recent_climb) %></p>
+            <div class="edit-delete">
+              <%= link_to(edit_climb_path(recent_climb)) do %>
+                <i class="fa-solid fa-square-pen edit-climb-in-profile"></i>
+              <% end %>
+              <%= link_to(climb_path(recent_climb), data: {turbo_method: :delete, turbo_confirm: "Delete this tip?"} ) do %>
+                <i class="fa-solid fa-square-minus delete-climb-in-profile"></i>
+              <% end %>
+            </div>
+          </div>
+            <div class="status-and-grade">
+              <p class="climbing-status climb">Status: <%= recent_climb.status %></p>
+              <p class="climb-grade"><%= recent_climb.line.grade %></p>
+            </div>
+        </div>
+      </div>
+    <% end %>
+
     <p class="view-all-my-climbs"><%= link_to "View All My Climbs", climbs_path %></p>
   </div>
 </div>

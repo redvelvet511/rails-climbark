@@ -1,16 +1,27 @@
-<div class="edit-log-climb-box">
-  <div class="arrow-and-title">
-    <%= link_to climbs_path do %>
-      <i class="fa-solid fa-arrow-left-long"></i>
-    <% end %>
-    <p>Update <%= @climb.line.name %></p>
-  </div>
+<% if @climb.line.photo.attached? %>
+  <% url = cl_image_path(@climb.line.photo.key) %>
+<% else %>
+  <% url = image_path("line_placeholder.jpg") %>
+<% end %>
 
-  <%= simple_form_for [@line, @climb] do |f| %>
-    <%= f.input :description %>
-    <%= f.input :status, as: :select, collection: Climb::STATUSES.map { |s| [s.capitalize, s] } %>
-    <%# <%= f.input :photo, as: :file %>
-    <%= f.input :completion_date, as: :date, html5: true %>
-    <%= f.submit class: "btn btn-custom-thin update-climb-button"%>
-  <% end %>
+<div class="line-details-container" style="background-image:url(<%= url %>)" data-controller="line-photo">
+  <div class="line-photo-toggler d-none" data-action="click->line-photo#hidePhoto" data-line-photo-target="toggler">
+    <i class="fa-solid fa-info"></i>
+  </div>
+  <div class="edit-log-climb-box">
+    <div class="arrow-and-title">
+      <%= link_to climbs_path do %>
+        <i class="fa-solid fa-arrow-left-long show-climb-arrow"></i>
+      <% end %>
+      <p class="edit-climb-name">Update <%= @climb.line.name %></p>
+    </div>
+
+    <%= simple_form_for [@line, @climb] do |f| %>
+      <%= f.input :description %>
+      <%= f.input :status, as: :select, collection: Climb::STATUSES.map { |s| [s.capitalize, s] } %>
+      <%# <%= f.input :photo, as: :file %>
+      <%= f.input :completion_date, as: :date, html5: true %>
+      <%= f.submit class: "btn btn-custom-thin update-climb-button"%>
+    <% end %>
+  </div>
 </div>
