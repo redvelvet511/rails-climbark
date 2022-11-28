@@ -1,8 +1,10 @@
-<h1>Edit a tip for </h1>
+<div class="edit-tip-box">
+  <p>Edit a tip for </p>
 
-<%= simple_form_for(@tip) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :content %>
-  <%# f.input :photo, as: :file %>
-  <%= f.submit %>
-<% end %>
+  <%= simple_form_for(@tip) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :content %>
+    <%# f.input :photo, as: :file %>
+    <%= f.submit class: "btn btn-custom-thin update-tip-button" %>
+  <% end %>
+</div>
