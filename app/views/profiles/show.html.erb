@@ -4,8 +4,13 @@
   <div class="profile-header">
     <div class="profile-pic-banner" style="background-image: url(/assets/pp.jpg);">
       <p class="profile-name"><%= current_user.username.capitalize %></p>
+
       <div class="profile-image">
-        <%= image_tag image_path("prof_pic_placeholder.jpg"), class: "avatar-large", alt: "avatar" %>
+        <% if current_user.photo.attached? %>
+          <%= cl_image_tag current_user.photo.key, class: "avatar-large", alt: "avatar"  %>
+        <% else %>
+          <%= image_tag "user_placeholder.jpg", class: "avatar-large", alt: "avatar" %>
+        <% end %>
       </div>
     </div>
     <div class="user-information">

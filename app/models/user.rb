@@ -11,7 +11,7 @@ class User < ApplicationRecord
   has_many :climbs, dependent: :destroy
   has_many :lines, through: :climbs
   has_many :tips, dependent: :destroy
-  has_one_attached :photo
+  has_one_attached :photo # , default_url: "user_placeholder.jpg"
 
   validates :username, presence: true, uniqueness: true, length: { in: 5..20 }
 end
