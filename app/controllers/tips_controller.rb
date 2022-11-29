@@ -59,7 +59,7 @@ class TipsController < ApplicationController
   end
 
   def user_not_authorized
-    flash[:alert] = "You have to log a climb in order to leav a tip."
+    flash[:alert] = "You have to log a climb in order to leave a tip."
     redirect_to(line_path(@line))
   end
 end
