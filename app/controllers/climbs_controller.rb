@@ -60,6 +60,6 @@ class ClimbsController < ApplicationController
   end
 
   def climb_params
-    params.require(:climb).permit(:status, :description, :climb_date)
+    params.require(:climb).permit(:status, :description, :climb_date, photos: [])
   end
 end

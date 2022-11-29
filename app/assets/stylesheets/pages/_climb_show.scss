@@ -1,0 +1,14 @@
+.climb-thumbnails {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 6px;
+  margin-top: 15px;
+
+  img {
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+  }
+}

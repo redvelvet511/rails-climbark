@@ -1,0 +1,26 @@
+.carousel-container {
+  height: calc(667px - 43px);
+  width: 100%;
+  background-color: rgba(black, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-inner {
+  width: 100vw;
+}
+
+.carousel-toggler i {
+  position: absolute;
+  top: 15px;
+  right: 12px;
+  font-size: 28px;
+  color: white;
+}
+
+.carousel-item img {
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+}
