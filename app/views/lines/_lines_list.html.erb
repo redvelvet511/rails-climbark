@@ -1,4 +1,5 @@
 <% lines.each do |line| %>
+<%= link_to(line_path(line)) do %>
   <div class="line-card">
     <div class="line-card-image">
       <% if line.photo.attached? %>
@@ -9,7 +10,7 @@
     </div>
 
     <div class="line-card-infos">
-      <p class="line-card-name"><%= link_to line.name, line_path(line) %></p>
+      <p class="line-card-name"><%= line.name %></p>
 
       <div class="line-card-category-and-grade">
         <p class="line-category">Type: <%= line.category.capitalize %></p>
@@ -17,4 +18,5 @@
       </div>
     </div>
   </div>
+<% end %>
 <% end %>
