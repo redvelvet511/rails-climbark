@@ -1,8 +1,40 @@
 .mapboxgl-popup {
-  max-width: 200px;
+  max-width: 200px !important;
 }
 
 .mapboxgl-popup-content {
-  text-align: center;
+  padding: 0px !important;
+  border-radius: 10px !important;
+}
+
+.info-window-container {
   font-family: $default-font;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  overflow: hidden;
+  padding: 10px;
+  text-align: center;
+  padding-bottom: 0px;
+}
+
+.info-window-area-name {
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.info-window-area-coordinates {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.info-window-area-routes {
+  font-size: 13px;
+  margin-bottom: 8px;
+
+  a {
+    color: $dirty-orange;
+  }
 }
