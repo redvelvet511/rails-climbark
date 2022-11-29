@@ -11,6 +11,13 @@
     <i class="fa-solid fa-info"></i>
   </div>
 
+  <% unless @line.photo.attached? %>
+    <div class="no-photo-display d-none" data-line-photo-target="noPhotoMessage">
+      <i class="fa-solid fa-eye-slash"></i>
+      <p>No photo available</p>
+    </div>
+  <% end %>
+
   <div class="line-details-box" data-line-photo-target="details">
     <div class="line-header">
       <%= link_to area_lines_path(@line.area) do %>
@@ -45,7 +52,7 @@
       <%= link_to "Log Climb", new_line_climb_path(@line), class: "btn btn-custom-thin btn-custom-thin-green" %>
     </div>
 
-    <hr>
+    <hr style="margin: 20px 0">
 
     <p class="line-subheading">Tips</p>
 

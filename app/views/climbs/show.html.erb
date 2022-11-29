@@ -12,6 +12,13 @@
     <i class="fa-regular fa-circle-xmark"></i>
   </div>
 
+  <% unless @climb.line.photo.attached? %>
+    <div class="no-photo-display d-none" data-line-photo-target="noPhotoMessage">
+      <i class="fa-solid fa-eye-slash"></i>
+      <p>No photo available</p>
+    </div>
+  <% end %>
+
   <div class="show-log-climb-box" data-line-photo-target="details" data-climb-photos-target="details">
     <div class="arrow-and-title">
       <%= link_to(climbs_path) do %>

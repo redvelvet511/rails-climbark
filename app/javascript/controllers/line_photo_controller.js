@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="line-photo"
 export default class extends Controller {
-  static targets = ["details", "toggler"]
+  static targets = ["details", "toggler", "noPhotoMessage"]
 
   connect() {
   }
@@ -10,10 +10,16 @@ export default class extends Controller {
   displayPhoto() {
     this.detailsTarget.classList.add("d-none")
     this.togglerTarget.classList.remove("d-none")
+    if (this.noPhotoMessageTarget) {
+      this.noPhotoMessageTarget.classList.remove("d-none")
+    }
   }
 
   hidePhoto() {
     this.togglerTarget.classList.add("d-none")
     this.detailsTarget.classList.remove("d-none")
+    if (this.noPhotoMessageTarget) {
+      this.noPhotoMessageTarget.classList.add("d-none")
+    }
   }
 }

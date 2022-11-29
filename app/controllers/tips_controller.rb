@@ -8,7 +8,7 @@ class TipsController < ApplicationController
     authorize(@line, policy_class: TipPolicy)
   end
 
-  def create  
+  def create
     @tip = Tip.new(tip_params)
     @tip.line = @line
     @tip.user = current_user

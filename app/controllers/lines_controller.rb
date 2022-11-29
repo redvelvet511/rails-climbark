@@ -26,7 +26,7 @@ class LinesController < ApplicationController
   def show
     @line = Line.find(params[:id])
     authorize(@line)
-    @tips = @line.tips
+    @tips = @line.tips.order(updated_at: :desc)
   end
 
   private
