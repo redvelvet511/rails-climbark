@@ -16,11 +16,11 @@
     <div class="user-information">
       <div class="number-of-climb">
        <p class="number-of-climb-title">Climbs</p>
-       <p class="number-of-climb-info">4</p>
+       <p class="number-of-climb-info"><%= current_user.climbs.count %></p>
       </div>
       <div class="number-of-tip">
        <p class="number-of-tip-title">Tips</p>
-       <p class="number-of-tip-info">3</p>
+       <p class="number-of-tip-info"><%= current_user.tips.count %></p>
       </div>
       <div class="current-grade">
        <p class="current-grade-title">Grade</p>
