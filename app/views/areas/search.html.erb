@@ -1,29 +1,31 @@
-<%= link_to "home" do %>
-        <i class="fa-solid fa-arrow-left-long"></i>
-<% end %>
+<div class="search-result-container">
+  <div id="arrow-search-result">
+  <%= link_to "home" do %>
+          <i class="fa-solid fa-arrow-left-long"></i>
+  <% end %>
+  </div>
 
-<p>areas</p>
+  <div class="area-cards">
+    <% @search.each do |result| %>
+      <% if result.is_a?(Area) %>
+        <% if result.photo.attached? %>
+          <% url = cl_image_path(result.photo.key) %>
+        <% else %>
+          <% url = image_path("area_placeholder.jpg") %>
+        <% end %>
 
-<div class="area-cards">
-  <% @search.each do |result| %>
-    <% if result.is_a?(Area) %>
-      <% if result.photo.attached? %>
-        <% url = cl_image_path(result.photo.key) %>
-      <% else %>
-        <% url = image_path("area_placeholder.jpg") %>
-      <% end %>
-
-      <%= link_to(area_lines_path(result)) do %>
-        <div class="area-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= url %>)">
-          <p><%= result.name %></p>
-        </div>
-      <% end %>
-    <% elsif result.is_a?(Line) %>
+        <%= link_to(area_lines_path(result)) do %>
+          <div class="area-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= url %>)">
+            <p><%= result.name %></p>
+          </div>
+        <% end %>
+      <% elsif result.is_a?(Line) %>
         <%= link_to result.name, line_path(result) %>
         <% if result.photo.attached? %>
           <%= cl_image_tag result.photo.key, height: 100, width: 100, crop: :fill %>
         <% end %>
+      <% end %>
+      </li>
     <% end %>
-    </li>
-  <% end %>
+  </div>
 </div>
