@@ -1,6 +1,8 @@
 <%# All Areas (index) %>
 <div class="area-index-container">
-  <%= render "shared/search_bar" %>
+  <div class="search-bar-container fixed-top">
+    <%= render "shared/search_bar" %>
+  </div>
 
   <div class="area-cards">
     <% @areas.each do |area| %>

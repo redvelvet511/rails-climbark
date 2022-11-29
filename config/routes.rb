@@ -19,6 +19,4 @@ Rails.application.routes.draw do
   get "/search", to: "areas#search"
   get "/home", to: "pages#home"
   get "/map", to: "pages#map"
-
-  # get "/areas/:area_id/suggested_lines", to: "lines#suggested_lines"
 end

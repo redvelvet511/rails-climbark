@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 25px 0;
+    margin: 20px 0;
   }
 
   .search-field {
@@ -49,6 +49,12 @@
     color: white;
     padding-left: 1px;
   }
+}
+
+.search-bar-container {
+  height: 80px;
+  background-color: $light-green;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
 }
 
 // ------------- Old Code -------------
