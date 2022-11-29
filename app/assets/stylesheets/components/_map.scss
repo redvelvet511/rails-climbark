@@ -4,15 +4,5 @@
 
 .mapboxgl-popup-content {
   text-align: center;
-  font-family: "Open Sans", sans-serif;
-}
-
-#map {
-  max-width: 500px;
-  height: 92.5vh;
-  width: 100%;
-  position: sticky;
-  top: 57px;
-  margin-right: 0px;
-  margin-left: 10px;
+  font-family: $default-font;
 }

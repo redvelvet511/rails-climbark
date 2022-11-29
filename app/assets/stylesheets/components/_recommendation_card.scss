@@ -1,44 +1,48 @@
 .recommendation-section {
   background-color: $light-gray;
   margin: 10px;
-  margin-top: 10px;
-  border-radius: 5px;
-  padding: 10px;
-  padding-bottom: 0px;
-  padding-top: 0px;
+  padding: 0 10px;
 
   #recommendation {
     margin-top: 5px;
     margin-bottom: 5px;
   }
+
   #see-all {
     text-align: right;
+    margin-top: 3px;
     margin-bottom: 0px;
-
-    a {
-      color: black;
+    font-style: italic;
   }
-}
 
-.recommendation-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10px;
-  width: 330px;
-  margin-top: none;
-}
+  #see-all a {
+    color: black;
+  }
 
-.recommendation-card-info {
-  background-size: cover;
-  background-position: center;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 18px;
-  text-shadow: 3px 3px 3px rgba(0,0,0,100%);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
+  .recommendation-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    width: 330px;
+    margin: 0 auto;
+  }
+
+  .recommendation-card-info {
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.8);
+    border-radius: 5px;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
+  }
+
+  .recommendation-card-info a {
+    color: white;
+    text-align: center;
+  }
 }
