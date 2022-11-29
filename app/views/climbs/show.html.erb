@@ -23,7 +23,7 @@
 
     <p>Description: <%= @climb.description %></p>
     <p>Status: <%= @climb.status.capitalize %></p>
-    <p>Date logged: <%= @climb.climb_date %></p>
+    <p>Date climbed: <%= @climb.climb_date.strftime("%B %e, %Y") %></p>
 
     <div class="link-buttons-show-climb">
       <%= link_to(edit_climb_path(@climb)) do %>
