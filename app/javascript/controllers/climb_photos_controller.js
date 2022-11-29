@@ -8,7 +8,7 @@ export default class extends Controller {
   }
 
   displayCarousel(event) {
-    const index = Array.from(event.target.parentElement.children).indexOf(event.target)
+    const index = event.target.dataset.index
     this.innerCarouselTarget.children[index].classList.add("active")
     this.detailsTarget.classList.add("d-none")
     this.carouselTarget.classList.remove("d-none")
@@ -17,6 +17,9 @@ export default class extends Controller {
 
   hideCarousel() {
     this.carouselTarget.classList.add("d-none")
+    Array.from(this.innerCarouselTarget.children).forEach((image) => {
+      image.classList.remove("active")
+    })
     this.togglerTarget.classList.add("d-none")
     this.detailsTarget.classList.remove("d-none")
   }

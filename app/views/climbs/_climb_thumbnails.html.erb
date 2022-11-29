@@ -1,5 +1,5 @@
 <div class="climb-thumbnails">
-  <% photos.each do |photo| %>
-    <%= cl_image_tag(photo.key, data: {action: "click->climb-photos#displayCarousel"}) %>
+  <% photos.each_with_index do |photo, index| %>
+    <%= cl_image_tag(photo.key, data: {action: "click->climb-photos#displayCarousel", index: index}) %>
   <% end %>
 </div>

@@ -7,6 +7,10 @@
   justify-content: center;
 }
 
+.carousel-inner {
+  width: 100vw;
+}
+
 .carousel-toggler i {
   position: absolute;
   top: 15px;
@@ -16,7 +20,6 @@
 }
 
 .carousel-item img {
-  width: 100%;
   height: 250px;
   object-fit: cover;
   object-position: center;
