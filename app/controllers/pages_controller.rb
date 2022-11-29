@@ -16,7 +16,7 @@ class PagesController < ApplicationController
         lat: recommended_area.latitude,
         lng: recommended_area.longitude,
         info_window: render_to_string(partial: "info_window", locals: {area: recommended_area}),
-        image_url: helpers.asset_url("mtn.png")
+        image_url: helpers.asset_url("marker.png")
       }
     end
   end
@@ -29,7 +29,7 @@ class PagesController < ApplicationController
         lat: area.latitude,
         lng: area.longitude,
         info_window: render_to_string(partial: "info_window", locals: { area: area }),
-        image_url: helpers.asset_url("mtn.png")
+        image_url: helpers.asset_url("marker.png")
       }
     end
   end

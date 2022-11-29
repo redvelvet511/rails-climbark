@@ -2,6 +2,8 @@ class TipsController < ApplicationController
   before_action :set_line, only: %i[new create]
   before_action :set_tip, only: %i[edit update destroy]
 
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+
   def new
     # skip_authorization
     @tip = Tip.new
@@ -54,5 +56,10 @@ class TipsController < ApplicationController
 
   def tip_params
     params.require(:tip).permit(:title, :content)
+  end
+
+  def user_not_authorized
+    flash[:alert] = "You have to log a climb in order to leave a tip."
+    redirect_to(line_path(@line))
   end
 end
