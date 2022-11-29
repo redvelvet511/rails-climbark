@@ -1,21 +1,3 @@
-// .area-name-of-route {
-//   margin: 15px;
-//   font-size: 18px;
-//   border: 0px;
-//   margin-bottom: -10px;
-//   text-align: center;
-// }
-
-// .area-name-of-route-all {
-//   margin: 15px;
-//   font-size: 18px;
-//   border: 0px;
-//   margin-bottom: -10px;
-//   margin-top: 10px;
-//   font-weight: bold;
-//   text-decoration: underline;
-// }
-
 .line-tabs {
   width: 312px;
   margin: 0 auto;
@@ -41,6 +23,7 @@
   justify-content: center;
   width: 345px;
   margin: 0 15px;
+  margin-top: 131px;
 }
 
 .line-card {
@@ -95,3 +78,30 @@
       font-size: 13px;
     }
 }
+
+.no-lines {
+  width: 75%;
+  margin: 180px auto 0 auto;
+  color: $dark-grey;
+  font-style: italic;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+// .area-name-of-route {
+//   margin: 15px;
+//   font-size: 18px;
+//   border: 0px;
+//   margin-bottom: -10px;
+//   text-align: center;
+// }
+
+// .area-name-of-route-all {
+//   margin: 15px;
+//   font-size: 18px;
+//   border: 0px;
+//   margin-bottom: -10px;
+//   margin-top: 10px;
+//   font-weight: bold;
+//   text-decoration: underline;
+// }
