@@ -1,0 +1,5 @@
+<div class="climb-thumbnails">
+  <% photos.each do |photo| %>
+    <%= cl_image_tag(photo.key, data: {action: "click->climb-photos#displayCarousel"}) %>
+  <% end %>
+</div>

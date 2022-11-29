@@ -4,17 +4,20 @@
 
 import { application } from "./application"
 
+import ClimbPhotosController from "./climb_photos_controller"
+application.register("climb-photos", ClimbPhotosController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
 import LinePhotoController from "./line_photo_controller"
 application.register("line-photo", LinePhotoController)
 
-import NearAreasController from "./near_areas_controller"
-application.register("near-areas", NearAreasController)
-
 import ListLinesController from "./list_lines_controller"
 application.register("list-lines", ListLinesController)
 
 import MapController from "./map_controller"
 application.register("map", MapController)
+
+import NearAreasController from "./near_areas_controller"
+application.register("near-areas", NearAreasController)
