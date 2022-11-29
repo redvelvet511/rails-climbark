@@ -1,50 +1,52 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1598438924166-6d89ca57f248?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80);">
-    <% if current_user %>
-      <p>Hey <%= current_user.username %>, ready to climb?</p>
-    <% else %>
-      <p>Hey, ready to climb?</p>
-    <% end %>
-    <%= render "shared/search_bar" %>
-</div>
-  <div class="recommendation-section" >
-    <p id="recommendation">Areas nearest to you</p>
-    <div class="recommendation-cards">
-
-      <% if @area1.photo.attached? %>
-        <% url = cl_image_path(@area1.photo.key) %>
+<div class="home-container">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1598438924166-6d89ca57f248?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80);">
+      <% if current_user %>
+        <p>Hey <%= current_user.username %>, ready to climb?</p>
       <% else %>
-        <% url = image_path("area_placeholder.jpg") %>
+        <p>Hey, ready to climb?</p>
       <% end %>
-
-      <div class="recommendation-card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= url %>)">
-        <%= link_to @area1.name, area_lines_path(@area1.id) %>
-      </div>
-
-      <% if @area2.photo.attached? %>
-        <% url = cl_image_path(@area2.photo.key) %>
-      <% else %>
-        <% url = image_path("area_placeholder.jpg") %>
-      <% end %>
-
-      <div class="recommendation-card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= url %>">
-        <%= link_to @area2.name, area_lines_path(@area2.id) %>
-      </div>
-
-      <% if @area3.photo.attached? %>
-        <% url = cl_image_path(@area3.photo.key) %>
-      <% else %>
-        <% url = image_path("area_placeholder.jpg") %>
-      <% end %>
-
-      <div class="recommendation-card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= url %>">
-        <%= link_to @area3.name, area_lines_path(@area3.id) %>
-      </div>
-    </div>
-    <p id="see-all"><%= link_to "See all", areas_path %></p>
+      <%= render "shared/search_bar_home" %>
   </div>
+    <div class="recommendation-section" >
+      <p id="recommendation">Areas nearest to you</p>
+      <div class="recommendation-cards">
 
-<div id="map" style="width: 375px; height: 205px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+        <% if @area1.photo.attached? %>
+          <% url = cl_image_path(@area1.photo.key) %>
+        <% else %>
+          <% url = image_path("area_placeholder.jpg") %>
+        <% end %>
+
+        <div class="recommendation-card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= url %>)">
+          <%= link_to @area1.name, area_lines_path(@area1.id) %>
+        </div>
+
+        <% if @area2.photo.attached? %>
+          <% url = cl_image_path(@area2.photo.key) %>
+        <% else %>
+          <% url = image_path("area_placeholder.jpg") %>
+        <% end %>
+
+        <div class="recommendation-card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= url %>">
+          <%= link_to @area2.name, area_lines_path(@area2.id) %>
+        </div>
+
+        <% if @area3.photo.attached? %>
+          <% url = cl_image_path(@area3.photo.key) %>
+        <% else %>
+          <% url = image_path("area_placeholder.jpg") %>
+        <% end %>
+
+        <div class="recommendation-card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= url %>">
+          <%= link_to @area3.name, area_lines_path(@area3.id) %>
+        </div>
+      </div>
+      <p id="see-all"><%= link_to "See all", areas_path %></p>
+    </div>
+
+  <div id="map" style="width: 375px; height: 205px;"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 </div>
