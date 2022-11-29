@@ -43,7 +43,11 @@
       </div>
     </div>
 
-    <p id="see-all"><%= link_to "See all", areas_path %></p>
+    <p id="see-all">
+      <%= link_to areas_path do %>
+        See all <i class="fa-solid fa-caret-right"></i>
+      <% end %>
+    </p>
   </div>
 
   <div id="map" style="width: 375px; height: 205px;"
