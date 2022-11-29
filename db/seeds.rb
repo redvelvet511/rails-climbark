@@ -13,28 +13,28 @@ Climb.create!([
   {
     status: "completed",
     description: "Here is some description.",
-    completion_date: Date.today - 100,
+    climb_date: Date.today - 100,
     line: Line.find(105),
     user: User.find_by(username: "Komezu")
   },
   {
     status: "attempted",
     description: "This one is really hard!",
-    completion_date: Date.today - 5,
+    climb_date: Date.today - 5,
     line: Line.find(7),
     user: User.find_by(username: "Redvelvet")
   },
   {
     status: "retreated",
     description: "Backed down at the third bolt because it was too hard :(",
-    completion_date: Date.today - 10,
+    climb_date: Date.today - 10,
     line: Line.find(98),
     user: User.find_by(username: "Redvelvet")
   },
   {
     status: "completed",
     description: "Here is some description.",
-    completion_date: Date.today - 50,
+    climb_date: Date.today - 50,
     line: Line.find(105),
     user: User.find_by(username: "Nifemi")
   }

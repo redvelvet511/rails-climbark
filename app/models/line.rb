@@ -20,6 +20,6 @@ class Line < ApplicationRecord
   def self.highest_grade(lines)
     grades_index = []
     lines.each { |line| grades_index << GRADES_LIST.index(line.grade) }
-    GRADES_LIST[grades_index.max]
+    grades_index.empty? ? "5.4" : GRADES_LIST[grades_index.max]
   end
 end

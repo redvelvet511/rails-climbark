@@ -5,7 +5,6 @@ class PagesController < ApplicationController
   end
 
   def home
-
     @recommended_areas = [
       @area1 = Area.near([46.469, -80.976], 140, order: :distance).first,
       @area2 = Area.near([46.469, -80.976], 140, order: :distance).second,
