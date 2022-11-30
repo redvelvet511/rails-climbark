@@ -1,10 +1,23 @@
-<div class="edit-tip-box">
-  <p>Edit a tip for </p>
+<% if @tip.line.photo.attached? %>
+  <% url = cl_image_path(@tip.line.photo.key) %>
+<% else %>
+  <% url = image_path("line_placeholder.jpg") %>
+<% end %>
 
-  <%= simple_form_for(@tip) do |f| %>
-    <%= f.input :title %>
-    <%= f.input :content %>
-    <%# f.input :photo, as: :file %>
-    <%= f.submit class: "btn btn-custom-thin update-tip-button" %>
-  <% end %>
+<div class="line-details-container" style="background-image:url(<%= url %>)">
+  <div class="new-climb-box">
+    <div class="button-and-route">
+      <%= link_to line_path(@tip.line) do %>
+        <i class="fa-solid fa-arrow-left-long"></i>
+      <% end %>
+      <p class="log-climb-for-route text-center">Update your tip for<br><%= @tip.line.name %></p>
+      <div class="icon-width-spacer"></div>
+    </div>
+
+    <%= simple_form_for(@tip) do |f| %>
+      <%= f.input :title %>
+      <%= f.input :content %>
+      <div class="text-center"><%= f.submit class: "btn btn-custom-thin leave-tip-button" %></div>
+    <% end %>
+  </div>
 </div>

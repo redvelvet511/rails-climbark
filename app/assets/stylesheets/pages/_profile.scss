@@ -1,111 +1,70 @@
 .profile-container {
-  margin: 15px;
-  padding: 5px;
+  padding: 20px;
 
   .log-out {
     text-align: right;
-    margin-bottom: 0px;
-
-    a {
-      color: black;
-    }
+    margin-bottom: 5px;
   }
 
-  .profile-name {
-    font-weight: bold;
+  .log-out a {
+    color: $dirty-orange;
     font-size: 20px;
-    text-align: center;
-  }
-
-  .profile-header {
-    text-align: center;
-    padding-top: 5px;
   }
 
   .profile-pic-banner {
     background-size: cover;
     background-position: center;
-    padding: 0 0;
     height: 170px;
   }
 
-  .profile-image {
-    display: flex;
-    justify-content: center;
+  .profile-name {
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+.user-information {
+  display: flex;
+  justify-content: space-around;
+
+  .profile-badge {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    font-size: 18px;
   }
 
-  .user-information {
-    margin-top: -10px;
-    display: flex;
-    justify-content: space-around;
-
-    .number-of-climb {
-      text-align: center;
-      background-color: $light-green;
-      border-radius: 50%;
-      height: 80px;
-      width:80px;
-      padding-top: 8px;
-      font-size: 18px;
-
-      .number-of-climb-title {
-        margin: 5px;
-      }
-
-      .number-of-climb-info {
-        font-weight: bold;
-      }
-    }
-
-    .number-of-tip {
-      text-align: center;
-      background-color: $light-blue;
-      border-radius: 50%;
-      height: 80px;
-      width:80px;
-      padding-top: 8px;
-      font-size: 18px;
-
-      .number-of-tip-title {
-        margin: 5px;
-      }
-
-      .number-of-tip-info {
-        font-weight: bold;
-      }
-    }
-
-    .current-grade {
-      text-align: center;
-      background-color: $dirty-orange;
-      border-radius: 50%;
-      height: 80px;
-      width:80px;
-      padding-top: 8px;
-      font-size: 18px;
-
-      .current-grade-title {
-        margin: 5px;
-      }
-
-      .current-grade-info {
-        font-weight: bold;
-      }
-    }
+  .profile-badge-title {
+    margin: 15px 0 0 0;
   }
 
-  .log-climb-preview {
-    margin-top: 15px;
-    background-color: white;
-    height: 300px;
-    padding: 10px;
+  .profile-badge-info {
+    font-weight: bold;
+  }
 
-    .view-all-my-climbs {
-      text-align: right;
+  .number-of-climbs {
+    background-color: $light-green;
+  }
 
-      a {
-        color: black;
-      }
+  .number-of-tips {
+    background-color: $light-blue;
+  }
+
+  .current-grade {
+    background-color: $dirty-orange;
+  }
+}
+
+.climbs-preview {
+  margin-top: 15px;
+  background-color: white;
+  padding: 10px;
+
+  .view-all-my-climbs {
+    text-align: right;
+
+    a {
+      color: black;
     }
   }
 }

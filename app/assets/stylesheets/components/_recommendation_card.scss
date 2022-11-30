@@ -6,6 +6,7 @@
   #recommendation {
     margin-top: 5px;
     margin-bottom: 5px;
+    font-weight: bold;
   }
 
   #see-all {
@@ -23,7 +24,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
-    width: 330px;
     margin: 0 auto;
   }
 
