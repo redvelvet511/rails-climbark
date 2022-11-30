@@ -1,79 +1,68 @@
-.profile-container {
+.profile-pic-banner {
+  background-size: cover;
+  background-position: bottom;
   padding: 20px;
+  width: 100%;
+  height: 260px;
+}
 
-  .log-out {
-    text-align: right;
-    margin-bottom: 5px;
-  }
+.log-out {
+  text-align: right;
+  margin-bottom: 5px;
 
-  .log-out a {
-    color: $dirty-orange;
+  a {
+    color: white;
     font-size: 20px;
   }
+}
 
-  .profile-pic-banner {
-    background-size: cover;
-    background-position: center;
-    height: 170px;
-  }
-
-  .profile-name {
-    font-weight: bold;
-    font-size: 20px;
-  }
+.profile-name {
+  font-size: 30px;
+  color: white;
+  margin-top: 10px;
+  text-shadow: 3px 3px 3px rgba(0,0,0,100%);
 }
 
 .user-information {
+  margin-top: 20px;
   display: flex;
   justify-content: space-around;
-
-  .profile-badge {
-    border-radius: 50%;
-    height: 80px;
-    width: 80px;
-    font-size: 18px;
-  }
-
-  .profile-badge-title {
-    margin: 15px 0 0 0;
-  }
-
-  .profile-badge-info {
-    font-weight: bold;
-  }
-
-  .number-of-climbs {
-    background-color: $light-green;
-  }
-
-  .number-of-tips {
-    background-color: $light-blue;
-  }
-
-  .current-grade {
-    background-color: $dirty-orange;
-  }
 }
 
-.climbs-preview {
-  margin-top: 15px;
-  background-color: white;
-  padding: 10px;
-
-  .view-all-my-climbs {
-    text-align: right;
-
-    a {
-      color: black;
-    }
-  }
+.current-grade {
+  text-align: center;
 }
 
-.status-and-grade {
-  display: flex;
-  justify-content: space-between;
+.fa-mountain {
+  font-size: 30px;
+}
 
-  .climb-grade {
-    margin-right: 10px;
-  }
+.number-of-tips {
+  text-align: center;
+}
+
+.fa-lightbulb {
+  font-size: 30px;
+}
+
+.number-of-climbs {
+  text-align: center;
+}
+
+.fa-flag {
+  font-size: 30px;
+}
+
+.profile-badge-title {
+  font-size: 12px;
+  margin-bottom: 0px;
+}
+
+.profile-badge-info {
+  font-size: 20px
+}
+
+.no-climb-log {
+  margin-top: 80px;
+  text-align: center;
 }
