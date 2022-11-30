@@ -21,3 +21,6 @@ application.register("map", MapController)
 
 import NearAreasController from "./near_areas_controller"
 application.register("near-areas", NearAreasController)
+
+import SearchResultsController from "./search_results_controller"
+application.register("search-results", SearchResultsController)

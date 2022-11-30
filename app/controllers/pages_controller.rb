@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[home search landing map]
+  skip_before_action :authenticate_user!, only: %i[landing home map search]
 
   def landing
   end
@@ -33,7 +33,36 @@ class PagesController < ApplicationController
       }
     end
   end
+
+  def search
+    if params[:query].present?
+      pg_results = PgSearch.multisearch(params[:query])
+      @areas = []
+      @lines = []
+
+      unless pg_results.empty?
+        results = pg_results.map(&:searchable)
+        results.each do |result|
+          @areas << result if result.is_a?(Area)
+          @lines << result if result.is_a?(Line)
+        end
+      end
+    else
+      @areas = policy_scope(Area)
+      @lines = policy_scope(Line)
+    end
+  end
 end
+
+# sql_query = "name ILIKE :query OR category ILIKE :query"
+# case params[:query].present?
+# when Area.where("name ILIKE ?", "%#{params[:query]}%").exists?
+#   @search = Area.where("name ILIKE ?", "%#{params[:query]}%")
+# when Line.where(sql_query, query: "%#{params[:query]}%").exists?
+#   @search = Line.where(sql_query, query: "%#{params[:query]}%")
+# else
+#   @search = Area.all
+# end
 
 # https://images.unsplash.com/photo-1549880181-56a44cf4a9a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80
 # https://images.unsplash.com/photo-1544198365-f5d60b6d8190?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80

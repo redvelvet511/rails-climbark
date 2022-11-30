@@ -2,6 +2,11 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#landing"
 
+  get "/home", to: "pages#home"
+  get "/map", to: "pages#map"
+  get "/search", to: "pages#search"
+  get "/profile", to: "profiles#show"
+
   resources :areas, only: %i[index] do
     resources :lines, only: %i[index]
     get '/suggested_lines', to: "lines#suggested_lines"
@@ -14,9 +19,4 @@ Rails.application.routes.draw do
 
   resources :climbs, only: %i[index show edit update destroy]
   resources :tips, only: %i[edit update destroy]
-
-  get "/profile", to: "profiles#show"
-  get "/search", to: "areas#search"
-  get "/home", to: "pages#home"
-  get "/map", to: "pages#map"
 end
