@@ -1,5 +1,5 @@
 meta_product_name: "Climbark"
 meta_title: "Climbark | Navigate through routes and log your climbs more efficiently!"
 meta_description: "Scrap your book and navigate through routes and log your climbs more efficiently with Climbark."
-meta_image: "cover.png" # should exist in `app/assets/images/`
+meta_image: "cover.jpg" # should exist in `app/assets/images/`
 # twitter_account: "@product_twitter_account"   # required for Twitter Cards
