@@ -12,7 +12,7 @@
   </div>
 
   <% unless @line.photo.attached? %>
-    <div class="no-photo-display d-none" data-line-photo-target="noPhotoMessage">
+    <div id="no-photo-message" class="no-photo-display d-none">
       <i class="fa-solid fa-eye-slash"></i>
       <p>No photo available</p>
     </div>
