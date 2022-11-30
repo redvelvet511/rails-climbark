@@ -15,7 +15,7 @@ class Line < ApplicationRecord
   validates :description, presence: true
 
   include PgSearch::Model
-  multisearchable against: [:name, :category]
+  multisearchable against: %i[name category grade]
 
   def self.highest_grade(lines)
     grades_index = []

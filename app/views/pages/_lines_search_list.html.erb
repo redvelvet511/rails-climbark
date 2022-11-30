@@ -1,0 +1,28 @@
+<div class="line-cards">
+  <% if lines.empty? %>
+    <p class="no-lines text-center">No results available.</p>
+  <% end %>
+
+  <% lines.each do |line| %>
+    <%= link_to(line_path(line)) do %>
+      <div class="line-card">
+        <div class="line-card-image">
+          <% if line.photo.attached? %>
+            <%= cl_image_tag(line.photo.key) %>
+          <% else %>
+            <%= image_tag "line_placeholder.jpg" %>
+          <% end %>
+        </div>
+
+        <div class="line-card-infos">
+          <p class="line-card-name"><%= line.name %></p>
+
+          <div class="line-card-category-and-grade">
+            <p class="line-category">Type: <%= line.category.capitalize %></p>
+            <p class="line-grade"><i class="fa-solid fa-mountain"></i><%= line.grade %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
