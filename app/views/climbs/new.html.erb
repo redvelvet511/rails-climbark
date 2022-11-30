@@ -18,7 +18,7 @@
       <%= f.input :description %>
       <%= f.input :status, as: :select, collection: Climb::STATUSES.map { |s| [s.capitalize, s] } %>
       <%= f.input :climb_date, as: :date, input_html: { value: Date.today }, html5: true %>
-      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+      <%= f.input :photos, as: :file, label: "Photos", input_html: { multiple: true } %>
       <div class="text-center"><%= f.submit class: "btn btn-custom-thin submit-climb-button"%></div>
     <% end %>
   </div>

@@ -1,14 +1,88 @@
+.climb-details-box {
+  width: 300px;
+  max-height: 572px;
+  background-color: white;
+  padding: 20px 25px;
+  border-radius: 15px;
+  overflow-y: scroll;
+}
+
+.climb-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+
+  a {
+    color: black;
+  }
+
+  p {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+.climb-details-text {
+  font-weight: 300;
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+
+.climb-details-subheading {
+  margin-bottom: 2px;
+  color: $dark-grey;
+  font-size: 14px;
+  font-weight: 300;
+}
+
 .climb-thumbnails {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  row-gap: 6px;
-  margin-top: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 11px;
 
   img {
-    height: 60px;
-    width: 60px;
+    height: 76px;
+    width: 76px;
     object-fit: cover;
     object-position: center;
     box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+  }
+}
+
+.climb-details-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 55%;
+  margin: 20px auto 0 auto;
+
+  .climb-details-button {
+    padding: 2px 20px;
+    font-size: 12px;
+  }
+}
+
+.climb-details-completed {
+  border-top: 12px solid $light-green;
+
+  .climb-details-button {
+    background-color: $light-green;
+  }
+}
+
+.climb-details-attempted {
+  border-top: 12px solid $light-blue;
+
+  .climb-details-button {
+    background-color: $light-blue;
+  }
+}
+
+.climb-details-retreated {
+  border-top: 12px solid $dirty-orange;
+
+  .climb-details-button {
+    background-color: $dirty-orange;
   }
 }
