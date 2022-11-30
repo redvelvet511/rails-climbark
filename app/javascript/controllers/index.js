@@ -7,8 +7,8 @@ import { application } from "./application"
 import ClimbPhotosController from "./climb_photos_controller"
 application.register("climb-photos", ClimbPhotosController)
 
-import HelloController from "./hello_controller"
-application.register("hello", HelloController)
+import IconColorController from "./icon_color_controller"
+application.register("icon-color", IconColorController)
 
 import LinePhotoController from "./line_photo_controller"
 application.register("line-photo", LinePhotoController)
