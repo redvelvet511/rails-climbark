@@ -1,0 +1,19 @@
+<div class="area-cards search-page-areas">
+  <% if areas.empty? %>
+    <p class="no-lines text-center">No results available.</p>
+  <% end %>
+
+  <% areas.each do |area| %>
+    <% if area.photo.attached? %>
+      <% url = cl_image_path(area.photo.key) %>
+    <% else %>
+      <% url = image_path("area_placeholder.jpg") %>
+    <% end %>
+
+    <%= link_to(area_lines_path(area)) do %>
+      <div class="area-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= url %>)">
+        <p><%= area.name %></p>
+      </div>
+    <% end %>
+  <% end %>
+</div>
