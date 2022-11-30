@@ -1,3 +1,5 @@
+<%# Climb Details (show) %>
+
 <% if @climb.line.photo.attached? %>
   <% url = cl_image_path(@climb.line.photo.key) %>
 <% else %>
@@ -13,40 +15,45 @@
   </div>
 
   <% unless @climb.line.photo.attached? %>
-    <div class="no-photo-display d-none" data-line-photo-target="noPhotoMessage">
+    <div id="no-photo-message" class="no-photo-display d-none">
       <i class="fa-solid fa-eye-slash"></i>
       <p>No photo available</p>
     </div>
   <% end %>
 
-  <div class="show-log-climb-box" data-line-photo-target="details" data-climb-photos-target="details">
-    <div class="arrow-and-title">
+  <div class="climb-details-box" data-line-photo-target="details" data-climb-photos-target="details">
+    <div class="climb-header">
       <%= link_to(climbs_path) do %>
-        <i class="fa-solid fa-arrow-left-long show-climb-arrow"></i>
+        <i class="fa-solid fa-arrow-left-long"></i>
       <% end %>
-      <p class="log-climb-name"><%= @climb.line.name %></p>
+      <p class="climb-details-line text-center"><%= @climb.line.name %></p>
       <i class="fa-solid fa-camera-retro" data-action="click->line-photo#displayPhoto"></i>
     </div>
 
-    <p>Description: <%= @climb.description %></p>
-    <p>Status: <%= @climb.status.capitalize %></p>
-    <p>Date climbed: <%= @climb.climb_date.strftime("%B %e, %Y") %></p>
+    <p class="climb-details-text"><%= @climb.description %></p>
 
-    <div class="link-buttons-show-climb">
-      <%= link_to(edit_climb_path(@climb)) do %>
-        <i class="fa-solid fa-square-pen"></i>
-      <% end %>
-      <%= link_to(climb_path(@climb), data: {turbo_method: :delete, turbo_confirm: "Delete this log?"} ) do %>
-        <i class="fa-solid fa-square-minus"></i>
-      <% end %>
-    </div>
+    <p class="climb-details-subheading">Climbed on</p>
+    <p class="climb-details-text"><%= @climb.climb_date.strftime("%B %e, %Y") %></p>
+
+    <p class="climb-details-subheading">Status</p>
+    <p class="climb-details-text"><%= @climb.status.capitalize %></p>
 
     <% if @climb.photos.attached? %>
       <%= render "climb_thumbnails", photos: @climb.photos %>
     <% end %>
+
+    <div class="climb-details-buttons">
+      <%= link_to(edit_climb_path(@climb), class: "btn btn-custom-thin climb-details-button") do %>
+        <i class="fa-solid fa-pen"></i>
+      <% end %>
+
+      <%= link_to(climb_path(@climb), class: "btn btn-custom-thin climb-details-button", data: {turbo_method: :delete, turbo_confirm: "Delete this climb?"} ) do %>
+        <i class="fa-solid fa-trash-can"></i>
+      <% end %>
+    </div>
   </div>
 
-    <div class="carousel-container d-none" data-climb-photos-target="carousel">
-      <%= render "climb_images", photos: @climb.photos %>
-    </div>
+  <div class="carousel-container d-none" data-climb-photos-target="carousel">
+    <%= render "climb_images", photos: @climb.photos %>
+  </div>
 </div>
