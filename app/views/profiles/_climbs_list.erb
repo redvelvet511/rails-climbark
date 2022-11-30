@@ -1,0 +1,20 @@
+<div class="climb-log-cards">
+  <% climbs.each do |climb| %>
+    <%= link_to(climb_path(climb)) do %>
+      <div class="climb-log-card">
+        <div class="status-color <%= climb.status %>"></div>
+
+        <div class="climb-log-info">
+          <div class="climb-line-and-grade">
+            <p class="climb-line-name"><%= climb.line.name %></p>
+            <p class="climb-grade"><i class="fa-solid fa-mountain"></i><%= climb.line.grade %></p>
+          </div>
+
+          <p class="climb-info-text">Climbed on: <%= climb.climb_date.strftime("%B %e, %Y") %></p>
+
+          <p class="climb-info-text">Status: <%= climb.status.capitalize %></p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

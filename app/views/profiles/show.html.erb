@@ -36,7 +36,10 @@
       </div>
     </div>
   </div>
-  <%= render "climbs_preview" %>
-  <p class="view-all-my-climbs"><%= link_to "View All My Climbs", climbs_path %></p>
+  <% if @climbs.empty? %>
+    <em><p class="no-climb-log">You have no climbs yet.</p></em>
+  <% else %>
+    <%= render "climbs_list", climbs: @climbs %>
+  <% end %>
 </div>
 <div class="footer-spacer"></div>
