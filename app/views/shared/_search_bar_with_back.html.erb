@@ -10,7 +10,7 @@
       <%= text_field_tag :query,
         params[:query],
         class: "form-control search-field",
-        placeholder: "Find an area or a route"
+        placeholder: placeholder.nil? ? "Find an area or a route" : placeholder
       %>
     </div>
 
