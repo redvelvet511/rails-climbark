@@ -58,8 +58,31 @@
   margin: 20px auto 0 auto;
 
   .climb-details-button {
-    background-color: $light-green;
     padding: 2px 20px;
     font-size: 12px;
+  }
+}
+
+.climb-details-completed {
+  border-top: 12px solid $light-green;
+
+  .climb-details-button {
+    background-color: $light-green;
+  }
+}
+
+.climb-details-attempted {
+  border-top: 12px solid $light-blue;
+
+  .climb-details-button {
+    background-color: $light-blue;
+  }
+}
+
+.climb-details-retreated {
+  border-top: 12px solid $dirty-orange;
+
+  .climb-details-button {
+    background-color: $dirty-orange;
   }
 }

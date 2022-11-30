@@ -21,7 +21,7 @@
     </div>
   <% end %>
 
-  <div class="climb-details-box" data-line-photo-target="details" data-climb-photos-target="details">
+  <div class="climb-details-box climb-details-<%= @climb.status %>" data-line-photo-target="details" data-climb-photos-target="details">
     <div class="climb-header">
       <%= link_to(climbs_path) do %>
         <i class="fa-solid fa-arrow-left-long"></i>
