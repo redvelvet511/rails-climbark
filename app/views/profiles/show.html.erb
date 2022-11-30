@@ -40,7 +40,7 @@
               <%= link_to(edit_climb_path(recent_climb)) do %>
                 <i class="fa-solid fa-square-pen edit-climb-in-profile"></i>
               <% end %>
-              <%= link_to(climb_path(recent_climb), data: {turbo_method: :delete, turbo_confirm: "Delete this tip?"} ) do %>
+              <%= link_to(climb_path(recent_climb), data: {turbo_method: :delete, turbo_confirm: "Delete this log?"} ) do %>
                 <i class="fa-solid fa-square-minus delete-climb-in-profile"></i>
               <% end %>
             </div>
