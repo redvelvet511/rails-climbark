@@ -1,19 +1,31 @@
-.my-climbs-container {
-margin: 15px;
-margin-top: 30px;
-}
+.climbs-container {
+  width: 330px;
+  margin: 25px auto;
 
-.header-profile-index {
-  text-align: left;
-
-  .my-climb-title {
-    font-size: 20px;
-    font-weight: bold;
-    display: inline-block;
-    margin-left: 100px;
+  a {
     color: black;
   }
+}
 
+.climbs-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+
+  .climbs-title {
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+
+  .climbs-header-icon-spacer {
+    width: 20px;
+  }
+}
+
+.climb-log-cards {
+  width: 100%;
+  margin: 20px auto 0 auto;
 }
 
 .climb-log-card {
@@ -21,63 +33,53 @@ margin-top: 30px;
   background-color: white;
   height: 75px;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.3);
 
-  a {
-    color: black;
+  p {
+    margin: 0;
+  }
+
+  .climb-log-info {
+    margin: auto 15px;
+    flex-grow: 1;
+  }
+
+  .climb-line-and-grade {
+    display: flex;
+    align-items: center;
+  }
+
+  .climb-line-name {
+    flex-grow: 1;
+  }
+
+  .climb-grade i {
+    margin-right: 5px;
+    font-size: 13px;
+  }
+
+  .climb-info-text {
+    font-weight: 300;
+    font-size: 13px;
   }
 }
 
-.route-edit-delete {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  margin-bottom: -20px;
-}
-
-.climbing-status {
-  color: black;
-  padding-left: 10px;
-  padding-bottom: 5px;
-}
-
-.climb-line-name {
-  font-size: 18px;
-}
-
-.delete-climb-in-profile {
-  color: black;
-}
-
-.edit-climb-in-profile {
-  color: black;
-}
-
-.card-info-climb-log {
-  padding-left: 10px;
-  width: 300px;
-}
-
-.profile-climb-show-arrow {
-  color: black;
-}
-
 .status-color {
-  background-color: green;
-  width: 40px;
-  height: 75px;
+  width: 25px;
+  height: 100%;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
 .completed {
-  background: $light-green;
+  background-color: $light-green;
 }
 
 .attempted {
-  background: $light-blue;
+  background-color: $light-blue;
 }
 
 .retreated {
-  background: $dirty-orange;
+  background-color: $dirty-orange;
 }

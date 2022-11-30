@@ -1,3 +1,7 @@
+<% if lines.empty? %>
+  <p class="no-lines text-center">No recommendations available for this area.</p>
+<% end %>
+
 <% lines.each do |line| %>
   <%= link_to(line_path(line)) do %>
     <div class="line-card">

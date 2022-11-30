@@ -1,8 +1,10 @@
 // Import page-specific CSS files here.
+@import "climb_log";
 @import "climb_new";
 @import "climb_show";
 @import "home";
-@import "line_show";
 @import "landing";
+@import "line_show";
 @import "profile";
-@import "climb_log";
+// @import "tip_edit";
+@import "tip_new";

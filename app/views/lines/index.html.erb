@@ -1,15 +1,17 @@
 <%# All Routes in Area (index) %>
 
-<%= render "shared/search_bar_with_back", path: areas_path %>
-
 <div data-controller="list-lines" data-list-lines-area-id-value="<%= @area.id %>">
-  <div class="line-tabs">
-    <p class="line-tab selected-tab"
-       data-list-lines-target="allTab"
-       data-action="click->list-lines#displayAll">All Routes</p>
-    <p class="line-tab"
-       data-list-lines-target="recommendedTab"
-       data-action="click->list-lines#displayRecommended">Recommended for You</p>
+  <div class="search-bar-and-tabs-container fixed-top">
+    <%= render "shared/search_bar_with_back", path: areas_path %>
+
+    <div class="line-tabs">
+      <p class="line-tab selected-tab"
+        data-list-lines-target="allTab"
+        data-action="click->list-lines#displayAll">All Routes</p>
+      <p class="line-tab"
+        data-list-lines-target="recommendedTab"
+        data-action="click->list-lines#displayRecommended">Recommended for You</p>
+    </div>
   </div>
 
   <div class="line-cards" data-list-lines-target="list">
@@ -20,4 +22,3 @@
 <div class="footer-spacer"></div>
 
 <%# <p class="area-name-of-route">Routes in <%= @area.name %>
-<%# link_to "Suggested routes in #{@area.name}", area_suggested_lines_path(@area) %>

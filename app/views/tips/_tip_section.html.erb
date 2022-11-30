@@ -10,7 +10,7 @@
           <% end %>
           <div class="tip-user-info">
             <p class="tip-username"><%= tip.user.username %></p>
-            <p class="tip-date"><%= tip.created_at.strftime("%B %e, %Y") %></p>
+            <p class="tip-date"><%= tip.updated_at.strftime("%B %e, %Y") %></p>
           </div>
         </div>
 
@@ -22,7 +22,7 @@
                 <i class="fa-solid fa-square-pen"></i>
               <% end %>
               <%= link_to(tip_path(tip), data: {turbo_method: :delete, turbo_confirm: "Delete this tip?"} ) do %>
-                <i class="fa-solid fa-square-minus"></i>
+                <i class="fa-solid fa-square-xmark"></i>
               <% end %>
             </div>
           <% end %>

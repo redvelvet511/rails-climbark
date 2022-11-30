@@ -1,1 +1,5 @@
-<h1>hello</h1>
+<div class="info-window-container">
+  <p class="info-window-area-name"><%= area.name %></p>
+  <p class="info-window-area-coordinates">Coordinates: <%= area.latitude %> , <%= area.longitude %></p>
+  <em><p class="info-window-area-routes"><%= link_to 'See all routes in this area', area_lines_path(area) %></p></em>
+</div>
