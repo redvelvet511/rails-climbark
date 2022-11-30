@@ -1,38 +1,45 @@
 <div class="profile-container">
-  <p class="log-out">
-    <%= link_to(destroy_user_session_path, data: {turbo_method: :delete}) do %>
-      <i class="fa-solid fa-right-from-bracket"></i>
-    <% end %>
-  </p>
+  <div class="profile-pic-banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(/assets/profile_banner.jpg)">
+    <p class="log-out">
+      <%= link_to(destroy_user_session_path, data: {turbo_method: :delete}) do %>
+        <i class="fa-solid fa-right-from-bracket"></i>
+      <% end %>
+    </p>
 
-  <div class="profile-header text-center">
-    <div class="profile-pic-banner" style="background-image: url(/assets/pp.jpg)">
-      <p class="profile-name"><%= current_user.username %></p>
+    <div class="profile-header text-center">
+        <p class="profile-name"><%= current_user.username %></p>
 
-      <div class="profile-image text-center">
-        <% if current_user.photo.attached? %>
-          <%= cl_image_tag current_user.photo.key, class: "avatar-large", alt: "avatar"  %>
-        <% else %>
-          <%= image_tag "user_placeholder.jpg", class: "avatar-large", alt: "avatar" %>
-        <% end %>
-      </div>
+        <div class="profile-image text-center">
+          <% if current_user.photo.attached? %>
+            <%= cl_image_tag current_user.photo.key, class: "avatar-large", alt: "avatar"  %>
+          <% else %>
+            <%= image_tag "user_placeholder.jpg", class: "avatar-large", alt: "avatar" %>
+          <% end %>
+        </div>
     </div>
-
+  </div>
     <div class="user-information">
-      <div class="profile-badge number-of-climbs">
-       <p class="profile-badge-title">Climbs</p>
-       <p class="profile-badge-info"><%= current_user.climbs.count %></p>
+      <div class="number-of-climbs">
+        <i class="fa-solid fa-flag"></i>
+        <p class="profile-badge-title">Climbs</p>
+        <p class="profile-badge-info"><%= current_user.climbs.count %></p>
       </div>
-      <div class="profile-badge number-of-tips">
-       <p class="profile-badge-title">Tips</p>
-       <p class="profile-badge-info"><%= current_user.tips.count %></p>
+      <div class="current-grade">
+        <i class="fa-solid fa-mountain"></i>
+        <p class="profile-badge-title">Highest grade climed</p>
+        <p class="profile-badge-info">5.10a</p>
       </div>
-      <div class="profile-badge current-grade">
-       <p class="profile-badge-title">Grade</p>
-       <p class="profile-badge-info">5.10a</p>
+      <div class="number-of-tips">
+        <i class="fa-solid fa-lightbulb"></i>
+        <p class="profile-badge-title">Tips</p>
+        <p class="profile-badge-info"><%= current_user.tips.count %></p>
       </div>
     </div>
   </div>
-  <p class="view-all-my-climbs"><%= link_to "View All My Climbs", climbs_path %></p>
+  <% if @climbs.empty? %>
+    <em><p class="no-climb-log">You have no climbs yet.</p></em>
+  <% else %>
+    <%= render "climbs_list", climbs: @climbs %>
+  <% end %>
 </div>
 <div class="footer-spacer"></div>
