@@ -4,7 +4,7 @@
   <title>We're sorry, but something went wrong (500)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-  .error-page {
+  .pge-something-wrong {
     background-color: #EFEFEF;
     color: #2E2F30;
     text-align: center;
@@ -12,18 +12,16 @@
     margin: 0;
   }
 
-  .error-page div.dialog {
+  .pge-something-wrong div.error-message {
     width: 95%;
     max-width: 20em;
     margin: 10em auto 0;
+    position: absolute;
+    margin-top: -500px;
+    margin-left: 25px;
   }
 
-  .error-page {
-    background-image: url("error.jpg");
-
-  }
-
-  .error-page h1 {
+  .pge-something-wrong h1 {
     color: white;
     font-size: 40px;
     text-shadow: #000000 1px 0 10px;
@@ -31,9 +29,10 @@
   </style>
 </head>
 
-<body class="error-page">
+<body class="pge-something-wrong">
+  <img src="/images/image.png" alt="x">
   <!-- This file lives in public/500.html -->
-  <div class="dialog">
+  <div class="error-message">
     <div>
       <h1>We're sorry, but something went wrong. <br> (500)</h1>
     </div>
