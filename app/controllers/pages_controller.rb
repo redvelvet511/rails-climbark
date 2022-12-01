@@ -36,7 +36,6 @@ class PagesController < ApplicationController
       image_url: helpers.asset_url("your_location.png")
     }
 
-
     @markers = @areas.map do |area|
       {
         lat: area.latitude,
