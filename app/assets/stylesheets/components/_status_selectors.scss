@@ -1,0 +1,45 @@
+.status-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .status-item {
+    flex: 0 0 30%;
+  }
+
+  .status-selector {
+    position: absolute;
+    transform: scale(0);
+  }
+
+  .status-selector + label {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: 1px solid #ACACAC;
+    color: black !important;
+  }
+
+  .status-selector:checked + label {
+    color: white !important;
+  }
+
+  #climb_status_completed:checked + label {
+    background-color: $light-green;
+    border-color: $light-green;
+  }
+
+  #climb_status_attempted:checked + label {
+    background-color: $light-blue;
+    border-color: $light-blue;
+  }
+
+  #climb_status_retreated:checked + label {
+    background-color: $dirty-orange;
+    border-color: $dirty-orange;
+  }
+}

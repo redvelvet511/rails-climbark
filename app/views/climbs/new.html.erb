@@ -16,7 +16,13 @@
 
     <%= simple_form_for [@line, @climb] do |f| %>
       <%= f.input :description %>
-      <%= f.input :status, as: :select, collection: Climb::STATUSES.map { |s| [s.capitalize, s] } %>
+      <%# f.input :status, as: :select, collection: Climb::STATUSES.map { |s| [s.capitalize, s] } %>
+      <%= f.input :status, as: :radio_buttons,
+                  collection_wrapper_tag: "div",
+                  collection_wrapper_class: 'status-wrapper',
+                  item_wrapper_class: 'status-item',
+                  input_html: {class: 'status-selector'},
+                  collection: Climb::STATUSES.map { |s| [s.capitalize, s] } %>
       <%= f.input :climb_date, as: :date, input_html: { value: Date.today }, html5: true %>
       <%= f.input :photos, as: :file, label: "Photos", input_html: { multiple: true } %>
       <div class="text-center"><%= f.submit "Log Climb", class: "btn btn-custom-thin submit-climb-button"%></div>
