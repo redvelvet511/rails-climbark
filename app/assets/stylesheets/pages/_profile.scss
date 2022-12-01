@@ -8,7 +8,7 @@
 
 .log-out {
   text-align: right;
-  margin-bottom: 5px;
+  margin-bottom: 0;
 
   a {
     color: white;
@@ -21,36 +21,18 @@
   color: white;
   margin-top: 10px;
   text-shadow: 3px 3px 3px rgba(0,0,0,100%);
+  font-family: $greeting-font;
 }
 
 .user-information {
   margin-top: 20px;
   display: flex;
   justify-content: space-around;
-}
 
-.current-grade {
-  text-align: center;
-}
-
-.fa-mountain {
-  font-size: 30px;
-}
-
-.number-of-tips {
-  text-align: center;
-}
-
-.fa-lightbulb {
-  font-size: 30px;
-}
-
-.number-of-climbs {
-  text-align: center;
-}
-
-.fa-flag {
-  font-size: 30px;
+  i {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
 }
 
 .profile-badge-title {
@@ -59,10 +41,24 @@
 }
 
 .profile-badge-info {
-  font-size: 20px
+  font-size: 20px;
+  margin-bottom: 0;
 }
 
 .no-climb-log {
   margin-top: 80px;
-  text-align: center;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.profile-climbs {
+  margin: 20px auto;
+
+  .my-climbs-title {
+    margin-bottom: 0;
+  }
+
+  .climb-log-cards {
+    margin: 0 auto;
+  }
 }

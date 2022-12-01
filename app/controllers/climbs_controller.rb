@@ -46,7 +46,7 @@ class ClimbsController < ApplicationController
     authorize(@climb)
 
     @climb.destroy
-    redirect_to climbs_path, status: 303 # see_other
+    redirect_to profile_path, status: 303 # see_other
   end
 
   private

@@ -7,39 +7,40 @@
     </p>
 
     <div class="profile-header text-center">
-        <p class="profile-name"><%= current_user.username %></p>
+      <p class="profile-name"><%= current_user.username %></p>
+      <div class="profile-image text-center">
+        <% if current_user.photo.attached? %>
+          <%= cl_image_tag current_user.photo.key, class: "avatar-large", alt: "avatar"  %>
+        <% else %>
+          <%= image_tag "user_placeholder.jpg", class: "avatar-large", alt: "avatar" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-        <div class="profile-image text-center">
-          <% if current_user.photo.attached? %>
-            <%= cl_image_tag current_user.photo.key, class: "avatar-large", alt: "avatar"  %>
-          <% else %>
-            <%= image_tag "user_placeholder.jpg", class: "avatar-large", alt: "avatar" %>
-          <% end %>
-        </div>
+  <div class="user-information">
+    <div class="number-of-climbs text-center">
+      <i class="fa-solid fa-flag"></i>
+      <p class="profile-badge-title">Climbs</p>
+      <p class="profile-badge-info"><%= current_user.climbs.count %></p>
+    </div>
+    <div class="current-grade text-center">
+      <i class="fa-solid fa-mountain"></i>
+      <p class="profile-badge-title">Highest Grade Climed</p>
+      <p class="profile-badge-info"><%= @display_grade %></p>
+    </div>
+    <div class="number-of-tips text-center">
+      <i class="fa-solid fa-lightbulb"></i>
+      <p class="profile-badge-title">Tips</p>
+      <p class="profile-badge-info"><%= current_user.tips.count %></p>
     </div>
   </div>
-    <div class="user-information">
-      <div class="number-of-climbs">
-        <i class="fa-solid fa-flag"></i>
-        <p class="profile-badge-title">Climbs</p>
-        <p class="profile-badge-info"><%= current_user.climbs.count %></p>
-      </div>
-      <div class="current-grade">
-        <i class="fa-solid fa-mountain"></i>
-        <p class="profile-badge-title">Highest grade climed</p>
-        <p class="profile-badge-info">5.10a</p>
-      </div>
-      <div class="number-of-tips">
-        <i class="fa-solid fa-lightbulb"></i>
-        <p class="profile-badge-title">Tips</p>
-        <p class="profile-badge-info"><%= current_user.tips.count %></p>
-      </div>
-    </div>
-  </div>
+
   <% if @climbs.empty? %>
-    <em><p class="no-climb-log">You have no climbs yet.</p></em>
+    <p class="no-climb-log text-center">You have no climbs yet.</p>
   <% else %>
     <%= render "climbs_list", climbs: @climbs %>
   <% end %>
 </div>
+
 <div class="footer-spacer"></div>
