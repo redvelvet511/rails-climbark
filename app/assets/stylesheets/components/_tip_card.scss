@@ -45,9 +45,12 @@
   }
 
   .tip-actions .fa-solid {
-    margin-left: 2px;
-    color: $dirty-orange;
-    font-size: 15px;
+    background-color: $dirty-orange;
+    margin-left: 3px;
+    padding: 3px 12px;
+    color: white;
+    font-size: 10px;
+    border-radius: 10px;
   }
 
   .tip-content {
