@@ -1,1 +1,11 @@
 // Specific CSS for your home-page
+.home-container {
+  position: relative;
+}
+
+.hidden-landing-link {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  opacity: 0;
+}
