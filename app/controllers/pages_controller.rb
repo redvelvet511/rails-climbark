@@ -11,6 +11,12 @@ class PagesController < ApplicationController
       @area3 = Area.near([46.469, -80.976], 140, order: :distance).third
     ]
 
+    @mymarker = {
+      lat: 46.469,
+      lng: -80.976,
+      image_url: helpers.asset_url("your_location.png")
+    }
+
     @markers = @recommended_areas.map do |recommended_area|
       {
         lat: recommended_area.latitude,
@@ -23,6 +29,12 @@ class PagesController < ApplicationController
 
   def map
     @areas = Area.all
+
+    @mymarker = {
+      lat: 46.469,
+      lng: -80.976,
+      image_url: helpers.asset_url("your_location.png")
+    }
 
     @markers = @areas.map do |area|
       {
