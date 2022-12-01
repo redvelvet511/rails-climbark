@@ -1,5 +1,6 @@
 <div class="profile-container">
-  <div class="profile-pic-banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(/assets/images/profile_banner.jpg)">
+  <% url = image_path("profile_banner.jpg") %>
+  <div class="profile-pic-banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(<%= url %>)">
     <p class="log-out">
       <%= link_to(destroy_user_session_path, data: {turbo_method: :delete}) do %>
         <i class="fa-solid fa-right-from-bracket"></i>
