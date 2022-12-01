@@ -19,7 +19,7 @@
     <%= simple_form_for [@line, @tip] do |f| %>
       <%= f.input :title %>
       <%= f.input :content %>
-      <div class="text-center"><%= f.submit class: "btn btn-custom-thin leave-tip-button"%></div>
+      <div class="text-center"><%= f.submit "Add Tip", class: "btn btn-custom-thin leave-tip-button"%></div>
     <% end %>
   </div>
 </div>

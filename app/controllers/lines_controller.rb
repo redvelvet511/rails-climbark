@@ -37,7 +37,8 @@ class LinesController < ApplicationController
 
   def lines_suggested_for_user(user)
     user_lines = user.lines.where("climbs.status = ?", "completed")
-    current_grade = Line.highest_grade(user_lines)
+    highest_grade = Line.highest_grade(user_lines)
+    current_grade = highest_grade.nil? ? "5.4" : highest_grade
     next_grade = Line::GRADES_LIST[Line::GRADES_LIST.index(current_grade) + 1]
 
     suggested_lines = @lines.where(grade: current_grade).where.not(id: user_lines).to_a

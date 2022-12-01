@@ -3,10 +3,10 @@
     <% @tips.each do |tip| %>
       <div class="tip-card">
         <div class="tip-user">
-          <% if current_user.photo.attached? %>
-            <%= cl_image_tag current_user.photo.key, class: "avatar-large", alt: "avatar"  %>
+          <% if tip.user.photo.attached? %>
+            <%= cl_image_tag tip.user.photo.key, alt: "avatar" %>
           <% else %>
-            <%= image_tag "user_placeholder.jpg", class: "avatar-large", alt: "avatar" %>
+            <%= image_tag "user_placeholder.jpg", alt: "avatar" %>
           <% end %>
           <div class="tip-user-info">
             <p class="tip-username"><%= tip.user.username %></p>

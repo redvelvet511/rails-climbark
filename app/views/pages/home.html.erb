@@ -1,4 +1,8 @@
 <div class="home-container">
+  <%= link_to(root_path, class: "hidden-landing-link") do %>
+    <i class="fa-solid fa-file-code"></i>
+  <% end %>
+
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(/assets/banner.jpg);">
       <% if current_user %>
         <p>Hey <%= current_user.username %>,<br>ready to climb?</p>
