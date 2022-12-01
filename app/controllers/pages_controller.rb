@@ -12,10 +12,10 @@ class PagesController < ApplicationController
     ]
 
     @mymarker = {
-                  lat: 46.469,
-                  lng: -80.976,
-                  image_url: helpers.asset_url("your_location.png")
-                }
+      lat: 46.469,
+      lng: -80.976,
+      image_url: helpers.asset_url("your_location.png")
+    }
 
     @markers = @recommended_areas.map do |recommended_area|
       {
