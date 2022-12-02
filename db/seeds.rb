@@ -19,14 +19,14 @@ Climb.create!([
   {
     status: "completed",
     description: "Here is some description.",
-    climb_date: Date.today - 100,
+    climb_date: Date.today - 15,
     line: Line.find(43),
     user: User.find_by(username: "Komezu")
   },
   {
     status: "completed",
     description: "Here is some description.",
-    climb_date: Date.today - 50,
+    climb_date: Date.today - 10,
     line: Line.find(43),
     user: User.find_by(username: "Nifemi21")
   },

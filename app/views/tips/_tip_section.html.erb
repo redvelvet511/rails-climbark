@@ -10,7 +10,8 @@
           <% end %>
           <div class="tip-user-info">
             <p class="tip-username"><%= tip.user.username %></p>
-            <p class="tip-date"><%= tip.updated_at.strftime("%B %e, %Y") %></p>
+            <%# <p class="tip-date"><%= tip.updated_at.strftime("%B %e, %Y") %>
+            <p class="tip-date"><%= tip.user.climbs.find_by(line: tip.line).climb_date.strftime("%B %e, %Y") %></p>
           </div>
         </div>
 
