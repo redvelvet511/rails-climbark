@@ -1,5 +1,5 @@
 .carousel-container {
-  height: calc(667px - 43px);
+  height: calc(100vh - 43px);
   width: 100%;
   background-color: rgba(black, 0.9);
   display: flex;
@@ -14,14 +14,13 @@
 .carousel-toggler i {
   position: absolute;
   top: 15px;
-  right: 12px;
+  right: 15px;
   font-size: 28px;
   color: white;
 }
 
 .carousel-item img {
-  height: 250px;
-  width: 375px;
+  width: 100vw;
   object-fit: cover;
   object-position: center;
 }

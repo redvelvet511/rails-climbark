@@ -1,6 +1,6 @@
 .climb-details-box {
-  width: 300px;
-  max-height: 520px;
+  width: 80vw;
+  max-height: 78vh;
   background-color: white;
   padding: 20px 25px;
   border-radius: 15px;
@@ -18,7 +18,7 @@
   }
 
   p {
-    margin: 0;
+    margin: 0 18px;
     font-size: 18px;
   }
 }
@@ -37,13 +37,15 @@
 }
 
 .climb-thumbnails {
+  margin: 0 auto;
+  width: 66.66vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 11px;
+  gap: 3.33vw;
 
   img {
-    height: 76px;
-    width: 76px;
+    height: 20vw;
+    width: 20vw;
     object-fit: cover;
     object-position: center;
     box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);

@@ -3,9 +3,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(667px - 43px);
+  height: calc(100vh - 43px);
   background-size: cover;
-  background-position: top center;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -26,8 +26,9 @@
 }
 
 .line-details-box {
-  width: 323px;
-  height: 572px;
+  width: 86vw;
+  min-height: 572px;
+  max-height: 86vh;
   padding: 20px 25px;
   background-color: white;
   border-radius: 15px;

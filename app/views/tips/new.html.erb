@@ -10,11 +10,11 @@
       <%= link_to line_path(@line) do %>
         <i class="fa-solid fa-arrow-left-long"></i>
       <% end %>
-      <p class="log-climb-for-route text-center">Add a tip for<br><%= @line.name %></p>
+      <p class="log-climb-for-route text-center">Add a tip for <span style="font-style:italic"><%= @line.name %></span></p>
       <div class="icon-width-spacer"></div>
     </div>
 
-    <p class="tip-instruction">Want to share your climb experience? Leave a tip on this route for future climbers!</p>
+    <p class="tip-instruction text-center">Want to share your climb experience? Leave a tip on this route for future climbers!</p>
 
     <%= simple_form_for [@line, @tip] do |f| %>
       <%= f.input :title %>
