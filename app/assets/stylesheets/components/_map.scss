@@ -38,3 +38,13 @@
     color: $dirty-orange;
   }
 }
+
+#map {
+  width: 100%;
+  height: calc(100vh - 419px - 43px);
+}
+
+#map-full {
+  width: 100%;
+  height: calc(100vh - 43px);
+}
