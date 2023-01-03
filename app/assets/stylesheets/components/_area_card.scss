@@ -2,16 +2,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 345px;
   margin: 0 15px;
-  margin-top: 90px;
+  margin-top: 102px;
 }
 
 .area-card {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 326px;
+  width: 87vw;
+  max-width: 600px;
   height: 158px;
   margin-bottom: 15px;
   background-size: cover;

@@ -1,5 +1,6 @@
 .line-tabs {
-  width: 312px;
+  width: 83vw;
+  max-width: 575px;
   margin: 0 auto;
   font-size: 16px;
   display: flex;
@@ -21,13 +22,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 345px;
   margin: 0 15px;
-  margin-top: 131px;
+  margin-top: 143px;
 }
 
 .line-card {
-  width: 332px;
+  width: 87vw;
+  max-width: 600px;
   height: 73px;
   display: flex;
   margin-bottom: 10px;
@@ -46,9 +47,8 @@
 }
 
 .line-card-infos {
-  margin-top: 10px;
-  margin-left: 12px;
-  width: 235px;
+  margin: 10px 12px 0 12px;
+  width: calc(100% - 85px);
   white-space: nowrap;
   overflow: hidden;
 
@@ -81,7 +81,7 @@
 
 .no-lines {
   width: 75%;
-  margin: 180px auto 0 auto;
+  margin: 27vh auto 0 auto;
   color: $dark-grey;
   font-style: italic;
   font-size: 17px;

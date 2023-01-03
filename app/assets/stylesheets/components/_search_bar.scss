@@ -3,11 +3,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 25px 0;
+    margin: 30px 0;
   }
 
   .search-field {
-    width: 270px;
+    width: 72vw;
     height: 40px;
     margin-right: 10px;
     padding: 6px 20px;
@@ -29,7 +29,8 @@
 
 .search-bar-with-back {
   .input-group {
-    width: 280px;
+    width: calc(87vw - 40px);
+    max-width: 560px;
   }
 
   .search-field {
@@ -52,7 +53,7 @@
 }
 
 .search-bar-container {
-  height: 90px;
+  height: 100px;
   background-color: $light-gray;
 }
 
