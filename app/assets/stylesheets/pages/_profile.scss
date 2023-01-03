@@ -3,12 +3,17 @@
   background-position: bottom;
   padding: 20px;
   width: 100%;
-  height: 260px;
+  height: 39vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .log-out {
-  text-align: right;
-  margin-bottom: 0;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 
   a {
     color: white;
@@ -17,11 +22,16 @@
 }
 
 .profile-name {
-  font-size: 30px;
+  font-size: 4.5vh;
   color: white;
   margin-top: 10px;
   text-shadow: 3px 3px 3px rgba(0,0,0,100%);
   font-family: $greeting-font;
+}
+
+.profile-image > img {
+  width: 15vh;
+  height: 15vh;
 }
 
 .user-information {
