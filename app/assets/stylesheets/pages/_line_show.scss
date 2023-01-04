@@ -3,7 +3,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 43px);
+  height: calc(100vh - 43px); /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 100vh) - 43px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -28,7 +29,8 @@
 .line-details-box {
   width: 86vw;
   min-height: 572px;
-  max-height: 86vh;
+  max-height: 86vh; /* Fallback for browsers that do not support Custom Properties */
+  max-height: calc(var(--vh, 100vh) * 0.86);
   padding: 20px 25px;
   background-color: white;
   border-radius: 15px;

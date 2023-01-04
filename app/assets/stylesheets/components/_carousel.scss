@@ -1,5 +1,6 @@
 .carousel-container {
-  height: calc(100vh - 43px);
+  height: calc(100vh - 43px); /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 100vh) - 43px);
   width: 100%;
   background-color: rgba(black, 0.9);
   display: flex;
@@ -15,6 +16,10 @@
   width: 100vw;
 }
 
+.carousel-toggler {
+  z-index: 100;
+}
+
 .carousel-toggler i {
   position: absolute;
   top: 15px;
@@ -24,7 +29,9 @@
 }
 
 .carousel-item img {
-  width: 100vw;
+  max-width: 100vw;
+  max-height: calc(100vh - 43px); /* Fallback for browsers that do not support Custom Properties */
+  max-height: calc(var(--vh, 100vh) - 43px);
   object-fit: cover;
   object-position: center;
 }
