@@ -41,10 +41,12 @@
 
 #map {
   width: 100%;
-  height: calc(100vh - 419px - 43px);
+  height: calc(100vh - 419px - 43px); /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 100vh) - 419px - 43px);
 }
 
 #map-full {
   width: 100%;
-  height: calc(100vh - 43px);
+  height: calc(100vh - 43px); /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 100vh) - 43px);
 }
