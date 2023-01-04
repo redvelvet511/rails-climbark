@@ -1,6 +1,9 @@
 // Specific CSS for your home-page
 .home-container {
   position: relative;
+  height: calc(100vh - 43px); /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 100vh) - 43px);
+  overflow-y: scroll;
 }
 
 .hidden-landing-link {
