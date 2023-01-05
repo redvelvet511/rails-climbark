@@ -13,8 +13,14 @@ module RailsClimbark
       generate.helper false
       generate.test_framework :test_unit, fixture: false
     end
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
+
+    # Allow embedding climbark in iframes for portfolio demos
+    config.action_dispatch.default_headers.merge!(
+      { 'X-Frame-Options' => 'ALLOWALL' }
+    )
 
     # Configuration for the application, engines, and railties goes here.
     #
