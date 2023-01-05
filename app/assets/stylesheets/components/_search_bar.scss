@@ -24,7 +24,9 @@
     background-color: black;
     color: white;
     font-size: 20px;
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
 }
 
@@ -45,7 +47,9 @@
     width: 38px;
     background-color: black;
     border-radius: 50px;
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
 
   button > a {

@@ -1,5 +1,6 @@
 .landing-bg {
-  height: 100vh;
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: var(--vh, 100vh);
   width: 100%;
   background-image: url("landing.jpg");
   background-size: cover;

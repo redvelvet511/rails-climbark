@@ -1,6 +1,7 @@
 .new-climb-box {
   width: 80vw;
-  max-height: 78vh;
+  max-height: 78vh; /* Fallback for browsers that do not support Custom Properties */
+  max-height: calc(var(--vh, 100vh) * 0.78);
   background-color: white;
   padding: 20px;
   border-radius: 15px;
