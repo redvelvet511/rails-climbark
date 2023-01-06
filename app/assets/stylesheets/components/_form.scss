@@ -1,18 +1,30 @@
+.user-form-headers {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
 .form-inputs {
-  // margin: 30px auto 20px auto;
   margin: 20px;
 }
 
-.user-form-headers {
-  margin-top: 15px;
+.form-actions {
   margin-left: 20px;
-  text-align: left;
+  margin-bottom: 20px;
 }
 
-.form-actions {
-  margin-left: 7px;
+.forgot-pass-btn {
+  background-color: $light-green;
 }
 
 .user-render-links {
   margin-left: 20px;
+  margin-bottom: 20px;
+
+  a {
+    color: $dirty-orange;
+  }
+}
+
+.forgot-pass-links > a {
+  color: $light-green;
 }
