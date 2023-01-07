@@ -21,16 +21,7 @@ Created as a 2-week final project during the Le Wagon Montréal Bootcamp in Nov-
 
 ## Screenshots
 
-<img src="app/assets/images/ss1.png" width="200">
-<img src="app/assets/images/ss2.png" width="200">
-<img src="app/assets/images/ss4.png" width="200">
-<img src="app/assets/images/ss5.png" width="200">
-<img src="app/assets/images/ss6.png" width="200">
-<img src="app/assets/images/ss7.png" width="200">
-<img src="app/assets/images/ss8.png" width="200">
-<img src="app/assets/images/ss11.png" width="200">
-<img src="app/assets/images/ss12.png" width="200">
-<img src="app/assets/images/ss13.png" width="200">
+<img src="app/assets/images/ss1.png" width="200"> <img src="app/assets/images/ss2.png" width="200"> <img src="app/assets/images/ss4.png" width="200"> <img src="app/assets/images/ss5.png" width="200"> <img src="app/assets/images/ss6.png" width="200"> <img src="app/assets/images/ss7.png" width="200"> <img src="app/assets/images/ss8.png" width="200"> <img src="app/assets/images/ss11.png" width="200"> <img src="app/assets/images/ss12.png" width="200"> <img src="app/assets/images/ss13.png" width="200">
 
 ## Authors
 
